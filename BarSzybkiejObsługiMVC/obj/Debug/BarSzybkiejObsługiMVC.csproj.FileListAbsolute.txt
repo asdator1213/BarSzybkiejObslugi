@@ -203,3 +203,4 @@ C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.dll
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.pdb
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.Initial.resources
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.WywalenieFieldsowzKategorii.resources

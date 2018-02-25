@@ -264,6 +264,10 @@
     <Compile Include="Migrations\201802251146268_Initial.Designer.cs">
       <DependentUpon>201802251146268_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802251217124_WywalenieFieldsowzKategorii.cs" />
+    <Compile Include="Migrations\201802251217124_WywalenieFieldsowzKategorii.Designer.cs">
+      <DependentUpon>201802251217124_WywalenieFieldsowzKategorii.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DaneUzytkownika.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -319,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802251146268_Initial.resx">
       <DependentUpon>201802251146268_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802251217124_WywalenieFieldsowzKategorii.resx">
+      <DependentUpon>201802251217124_WywalenieFieldsowzKategorii.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

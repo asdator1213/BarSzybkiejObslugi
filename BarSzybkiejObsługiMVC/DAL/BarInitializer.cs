@@ -24,10 +24,10 @@ namespace BarSzybkiejObsługiMVC.DAL
             context.SaveChanges();
 
             context.Kategorie.AddOrUpdate(k => k.NazwaKategorii,
-                new Kategoria { NazwaKategorii = "Danie obiadowe", OpisKategorii = "Opis" },
-                new Kategoria { NazwaKategorii = "Fast food", OpisKategorii = "Opis" },
-                new Kategoria { NazwaKategorii = "Przystawka", OpisKategorii = "Opis" },
-                new Kategoria { NazwaKategorii = "Napoje", OpisKategorii = "Opis" }
+                new Kategoria { NazwaKategorii = "Danie obiadowe"},
+                new Kategoria { NazwaKategorii = "Fast food"},
+                new Kategoria { NazwaKategorii = "Przystawka"},
+                new Kategoria { NazwaKategorii = "Napoje"}
                 );
 
             context.SaveChanges();
