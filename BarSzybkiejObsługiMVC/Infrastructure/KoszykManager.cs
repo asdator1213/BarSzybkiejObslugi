@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using BarSzybkiejObsługiMVC.ViewModels;
+using BarSzybkiejObsługiMVC.Utility;
 
 namespace BarSzybkiejObsługiMVC.Infrastructure
 {
@@ -40,10 +41,8 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
             var koszyk = PobierzKoszyk();
             
             var pozycjaKoszyka = koszyk.Find(p => p.Produkt.ProduktId == produktId);
-            // sprawdzenie czy dana pozycja już jest w koszyku
             if (pozycjaKoszyka != null)
             {
-                //jeśli istnieje to zwiększam jej ilość
                 pozycjaKoszyka.Ilosc++;
             }
             else
@@ -53,7 +52,6 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
 
                 if(produktDoDodania!=null)
                 {
-                    //jeśli jej nie ma, to dodaję nową pozycję do koszyka
                     var nowaPozycjaKoszyka = new PozycjaKoszyka
                     {
                         Produkt = produktDoDodania,
@@ -111,58 +109,16 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
         {
             var koszyk = PobierzKoszyk();
 
-            var zamowienieDoDodania = new Zamowienie()
-            {
-                DataDodania = DateTime.Now,
-                Klient = new Klient
-                {
-                    Imie = zamowienie.Imie,
-                    Nazwisko = zamowienie.Nazwisko,
-                    Telefon = zamowienie.Telefon,
-                    Email = zamowienie.Email
-                },   
-                Komentarz = zamowienie.Komentarz,
-                NaKiedy = zamowienie.NaKiedy,
-                Platnosc = new Platnosc()
-                {
-                    TypPlatnosci = zamowienie.TypPlatnosci
-                }
-            };
+            var zamowienieDoDodania = new Zamowienie();
+            zamowienieDoDodania.WypelnijZamowienie(zamowienie);
+            zamowienieDoDodania.DodajPozycjeKoszyka(koszyk);
 
             db.Zamowienia.Add(zamowienieDoDodania);
-
-            if(zamowienieDoDodania.PozycjeZamowienia == null)
-            {
-                zamowienieDoDodania.PozycjeZamowienia = new List<PozycjeZamowienia>();
-            }
-            decimal koszykWartosc = 0;
-            foreach(var koszykElement in koszyk)
-            {
-                var nowaPozycjaZamowienia = new PozycjeZamowienia()
-                {
-                    ProduktyId = koszykElement.Produkt.ProduktId,
-                    Ilosc = koszykElement.Ilosc,
-                    CenaZakupu = koszykElement.Produkt.Cena
-                };
-
-                koszykWartosc += (koszykElement.Ilosc * koszykElement.Produkt.Cena);
-                zamowienieDoDodania.PozycjeZamowienia.Add(nowaPozycjaZamowienia);
-            }
-
-            var czasPrzygotowania = koszyk.Max(p => p.Produkt.CzasPrzygotowania);
-
-            zamowienieDoDodania.Platnosc.Kwota = koszykWartosc;
-
             db.SaveChanges();
+
             zamowienieDoDodania.PlatnoscId = zamowienieDoDodania.Platnosc.Id;
             db.SaveChanges();
-
-            zamowienie.DataDodania = zamowienieDoDodania.DataDodania;
-            zamowienie.PozycjeZamowienia = zamowienieDoDodania.PozycjeZamowienia;
-            zamowienie.WartoscZamowienia = zamowienieDoDodania.Platnosc.Kwota;
-            zamowienie.ZamowienieId = zamowienieDoDodania.ZamowienieId;
-
-            zamowienie.NaKiedy = zamowienieDoDodania.NaKiedy;
+            zamowienie.UzupelnijZamowienieViewModel(zamowienieDoDodania);
 
             return zamowienie;
         }
@@ -171,5 +127,6 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
         {
             session.Set<List<PozycjaKoszyka>>(Const.KoszykSessionKlucz, null);
         }
+
     }
 }

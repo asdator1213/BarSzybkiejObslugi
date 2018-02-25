@@ -32,6 +32,7 @@ namespace BarSzybkiejObsługiMVC.ViewModels
         public DateTime DataDodania { get; set; }
         public StanZamowienia StanZamowienia { get; set; }
         public decimal WartoscZamowienia { get; set; }
+        public string KodZamowienia { get; set; }
 
         public int CzasOczekiwania { get; set; }
         public DateTime NaKiedy { get; set; }

@@ -134,7 +134,9 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 Komentarz = zamowienie.Komentarz,
                 StanZamowienia = zamowienie.StanZamowienia,
                 NaKiedy = zamowienie.NaKiedy,
-                TypPlatnosci = zamowienie.Platnosc.TypPlatnosci
+                TypPlatnosci = zamowienie.Platnosc.TypPlatnosci,
+                KodZamowienia = zamowienie.KodZamowienia
+               
             };
 
             //koszykManager.PustyKoszyk();

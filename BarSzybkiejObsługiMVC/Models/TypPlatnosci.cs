@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace BarSzybkiejObsługiMVC.Models
+{
+    public enum TypPlatnosci
+    {
+        Gotowka,
+        Przelew,
+        Karta
+    }
+}
