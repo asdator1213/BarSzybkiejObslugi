@@ -1,0 +1,53 @@
+﻿@model BarSzybkiejObsługiMVC.ViewModels.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Zarejestruj się</h2>
+
+<div>
+    @using (@Html.BeginForm("Register", "Account"))
+    {
+        @Html.AntiForgeryToken()
+
+        <table id="register-table" style="margin-left: auto;margin-right: auto">
+            <tr>
+                <td>@Html.LabelFor(model => model.Email)</td>
+                <td>
+                    @Html.TextBoxFor(model => model.Email)
+                    <div>
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Password)</td>
+                <td>
+                    @Html.TextBoxFor(model => model.Password, new{ type="password"})
+                    <div>
+                        @Html.ValidationMessageFor(model => model.Password)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.ConfirmPassword)</td>
+                <td>
+                    @Html.TextBoxFor(model => model.ConfirmPassword, new { type = "password" })
+                    <div>
+                        @Html.ValidationMessageFor(model => model.ConfirmPassword)
+                    </div>
+                    <input type="submit" value="Załóż nowe konto" />
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+
+@section Scripts
+{
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -1,0 +1,60 @@
+﻿@model BarSzybkiejObsługiMVC.Models.Produkt
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2><b>@Model.NazwaProduktu</b></h2>
+        </div>
+        <div class="col-md-4">
+            <h2>@Html.LabelFor(model => model.CzasPrzygotowania)</h2>
+        </div>
+        <div class="col-md-2">
+            <h2>@Model.CzasPrzygotowania minut</h2>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="detailsProductImage"><img src="~/Content/Images/@Model.NazwaPlikuObrazka" /></div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+            <div>
+                <h3>
+                    @Html.LabelFor(model => model.Opisy.Opis)
+                </h3>
+            </div>
+            <div>
+                <p>@Model.Opisy.Opis</p>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <h3><b>Cena: </b></h3>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>@Model.Cena zł</h3>
+                    </div>
+                    <div class="col-md-7"></div>
+                </div>
+            </div>
+            <div>
+                <div style="margin-top: 50px;" class="row">
+                    <div class="col-md-4">
+                        @Html.ActionLink("Dodaj do koszyka", "DodajDoKoszyka", "Koszyk", new { id = Model.ProduktId }, new { @class = "btn btn-info koszykDodaj" })
+                    </div>
+                    <div class="col-md-4">
+                        @Html.ActionLink("Powrót", null, null, new { href = Request.UrlReferrer, @class = "btn btn-warning koszykDodaj" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

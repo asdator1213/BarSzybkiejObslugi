@@ -1,0 +1,205 @@
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\BarSzybkiejObsługiMVC.dll.config
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\BarSzybkiejObsługiMVC.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\BarSzybkiejObsługiMVC.pdb
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csc.exe
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csc.exe.config
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csc.rsp
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csi.exe
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csi.exe.config
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csi.rsp
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.AppContext.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Console.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.Compression.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.Pipes.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Claims.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Threading.Thread.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.ValueTuple.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Xml.XPath.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\vbc.exe
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\vbc.exe.config
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\vbc.rsp
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\VBCSCompiler.exe
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Antlr3.Runtime.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\EntityFramework.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Newtonsoft.Json.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Owin.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Helpers.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Mvc.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Optimization.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Razor.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.Deployment.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.Razor.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\WebGrease.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Antlr3.Runtime.pdb
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\EntityFramework.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\Newtonsoft.Json.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Optimization.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Razor.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.Deployment.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.Razor.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Helpers.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Mvc.xml
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.BrandNewMigration.resources
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csproj.GenerateResource.Cache
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csproj.CoreCompileInputs.cache
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.dll
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.pdb
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.Klient.resources
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csprojResolveAssemblyReference.cache
+C:\Users\asdator1213\Source\Repos\SklepMVCInżynierka\BarSzybkiejObsługiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.NaKiedyZamowienie.resources
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\BarSzybkiejObsługiMVC.dll.config
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\BarSzybkiejObsługiMVC.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\BarSzybkiejObsługiMVC.pdb
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csc.exe
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csc.exe.config
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csc.rsp
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csi.exe
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csi.exe.config
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\csi.rsp
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.AppContext.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Console.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.Compression.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.IO.Pipes.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Claims.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Threading.Thread.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.ValueTuple.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Xml.XPath.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\vbc.exe
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\vbc.exe.config
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\vbc.rsp
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\VBCSCompiler.exe
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Antlr3.Runtime.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\EntityFramework.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Newtonsoft.Json.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Owin.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Helpers.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Mvc.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Optimization.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Razor.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.Deployment.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.Razor.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\WebGrease.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Antlr3.Runtime.pdb
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\EntityFramework.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Newtonsoft.Json.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Optimization.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Razor.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.Deployment.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Webpages.Razor.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Helpers.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Mvc.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csprojResolveAssemblyReference.cache
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.BrandNewMigration.resources
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.Klient.resources
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.NaKiedyZamowienie.resources
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csproj.GenerateResource.Cache
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csproj.CoreCompileInputs.cache
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.pdb
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.Initial.resources

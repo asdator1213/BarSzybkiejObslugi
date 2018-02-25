@@ -1,0 +1,58 @@
+﻿@model BarSzybkiejObsługiMVC.ViewModels.LoginViewModel
+
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Zaloguj się</h2>
+
+<div>
+    @using (@Html.BeginForm("Login", "Account", new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <table id="login-table" style="margin-left: auto;margin-right: auto">
+            <tr>
+                <td>@Html.LabelFor(model => model.Email)</td>
+                <td>
+                    @Html.TextBoxFor(model => model.Email)
+                    <div>
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Password)</td>
+                <td>
+                    @Html.TextBoxFor(model => model.Password)
+                    <div>
+                        @Html.ValidationMessageFor(model => model.Password)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="checkbox" style: margin-bottom:10px>
+                        @Html.CheckBoxFor(model => model.RememberMe, new { @checked = "checked" })
+                        @Html.LabelFor(model => model.RememberMe)
+                    </div>
+                    <input type="submit" value="Zaloguj" />
+                </td>
+            </tr>
+        </table>
+    }
+
+    <div style="text-align: center">
+        @Html.ActionLink("Nie mam jeszcze konta", "Register")
+    </div>
+
+</div>
+
+@section Scripts
+{
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

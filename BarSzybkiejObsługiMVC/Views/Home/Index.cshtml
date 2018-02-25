@@ -1,0 +1,28 @@
+﻿@model IEnumerable<BarSzybkiejObsługiMVC.Models.Produkt>
+@{
+    ViewBag.Title = "Bar szybkiej obsługi";
+}
+
+<div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper ex metus, at imperdiet justo condimentum a. Duis eu dui ligula. Aliquam viverra, dolor at cursus ultrices, enim tortor semper risus, et varius sapien enim sed tellus. Sed vulputate bibendum eros, quis consectetur sem dictum a. Duis commodo est mi, non blandit libero condimentum at. Nulla posuere purus turpis, at auctor turpis sodales ut. Fusce a tincidunt mauris, quis dictum leo.
+    <br/><br/>
+
+    Sed nisl nunc, aliquam sed pretium in, vulputate vitae arcu. Curabitur vehicula non ante quis porttitor. Mauris vitae pharetra ipsum, in placerat libero. Nam pulvinar mauris sit amet diam placerat semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus cursus justo risus, ut maximus sem viverra in. Vivamus quam erat, sodales a eros ut, placerat blandit urna. Suspendisse in dolor dapibus, fringilla libero in, egestas ligula. Curabitur eget nibh eu orci dignissim blandit. Curabitur eu dapibus nulla, id porta metus. Proin vel elementum odio, nec efficitur leo. Nulla dignissim ullamcorper velit, nec luctus erat bibendum eget. Maecenas accumsan sed libero nec mattis. Morbi at orci eu nibh fermentum rhoncus ac vitae elit.
+</div>
+<br/>
+<h2>Polecane produkty</h2>
+
+<div class="polecane_bar">
+    @foreach(var item in Model)
+    {
+        <a href="@Url.Action("Szczegoly", "Produkty", new { id = item.ProduktId})">
+            <div class="polecane mainPagePolecane">
+                <img src="~/Content/Images/@item.NazwaPlikuObrazka" />
+                <br /><br />
+                <div class="centered">@item.NazwaProduktu</div>
+            </div>
+        </a>
+    }
+    
+    <div style="clear:both"></div>
+</div>

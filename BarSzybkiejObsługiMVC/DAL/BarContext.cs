@@ -1,0 +1,40 @@
+﻿using BarSzybkiejObsługiMVC.Models;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Linq;
+using System.Web;
+using Microsoft.AspNet.Identity.EntityFramework;
+
+namespace BarSzybkiejObsługiMVC.DAL
+{
+    public class BarContext: IdentityDbContext<ApplicationUser>
+    {
+
+        public BarContext() : base("BarContext") { }
+
+        public DbSet<Opisy> Opisy { get; set; }
+        public DbSet<Kategoria> Kategorie { get; set; }
+        public DbSet<Produkt> Produkty { get; set; }
+        public DbSet<Klient> Klienci { get; set; }
+        public DbSet<Zamowienie> Zamowienia { get; set; }
+        public DbSet<PozycjeZamowienia> PozycjeZamowienia { get; set; }
+
+        static BarContext()
+        {
+            Database.SetInitializer(new BarInitializer()); 
+        }
+
+        public static BarContext Create()
+        {
+            return new BarContext();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
+    }
+}

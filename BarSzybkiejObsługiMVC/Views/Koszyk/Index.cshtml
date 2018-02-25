@@ -1,0 +1,118 @@
+﻿@model BarSzybkiejObsługiMVC.ViewModels.KoszykViewModel
+
+@{
+    ViewBag.Title = "Koszyk";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-2">
+        <h2 style="margin-bottom: 30px;">Twój koszyk</h2>
+    </div>
+</div>
+
+
+<table class="table table-hover">
+    <tr>
+        <th>Nazwa produktu</th>
+        <th>Ilość</th>
+        <th>Cena za produkt</th>
+        <th></th>
+    </tr>
+    @foreach (var pozycjaKoszyka in Model.PozycjeKoszyka)
+    {
+        <tr id="koszyk-wiersz-@pozycjaKoszyka.Produkt.ProduktId">
+            <td>
+                @Html.ActionLink($"{@pozycjaKoszyka.Produkt.NazwaProduktu}", "Szczegoly", "Produkty", new{ id=pozycjaKoszyka.Produkt.ProduktId}, null)
+            </td>
+            <td id="koszyk-ilosc-pozycji-@pozycjaKoszyka.Produkt.ProduktId">
+                @pozycjaKoszyka.Ilosc
+            </td>
+            <td>
+                @String.Format("{0:0.##}", pozycjaKoszyka.Wartosc) zł
+            </td>
+            <td>
+
+                <a class="usunProdukt btn btn-danger" data-id="@pozycjaKoszyka.Produkt.ProduktId" href="#">Usuń</a>
+            </td>
+        </tr>
+    }
+    <tr id="koszyk-pusty-wiadomosc"
+        @if (Model.PozycjeKoszyka != null && Model.PozycjeKoszyka.Count > 0) { <text> class="hidden" </text>  }>
+        <td>Twój koszyk jest pusty.</td>
+    </tr>
+
+</table>
+
+
+<div style="margin-bottom:20px">
+    <b>Kwota całkowita:</b> <span id="calkowita-cena-wartosc">@($"{Model.CenaCałkowita:0.##}") zł.</span>
+</div>
+
+<div>
+    @Html.ActionLink("Kontynuuj zakupy", null, null, null, new { href = Request.UrlReferrer, @class = "btn btn-warning" })
+    @if (Model.CenaCałkowita > 0)
+    {
+        @Html.ActionLink("Zapłać za zakupy", "ZlozZamowienie", "Koszyk", null, new{ @id="koszyk-button-zaplac", @class="btn btn-info"})
+    }
+
+</div>
+
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
+<script>
+    $(function () {
+        $(".usunProdukt").click(function () {
+
+            var rekordDoUsuniecia = $(this).attr("data-id"); //id rekordu do usunięcia
+
+            if (rekordDoUsuniecia !== '') {
+                $.post("/Koszyk/UsunZKoszyka", { "produktId": rekordDoUsuniecia },
+                    function (response) {
+                        if (response.IloscPozycjiUsuwanej === 0) {
+                            $("#koszyk-wiersz-" + response.IdPozycjiUsuwanej).fadeOut('slow',
+                                function () {
+                                    if (response.KoszykIloscPozycji === 0) {
+                                        $("#koszyk-pusty-wiadomosc").removeClass("hidden");
+                                    }
+                                });
+                        }
+                        else {
+                            $("#koszyk-ilosc-pozycji-" + response.IdPozycjiUsuwanej).text(response.IloscPozycjiUsuwanej);
+                        }
+
+                        if (response.KoszykIloscPozycji === 0) {
+                            $("#koszyk-button-zaplac").addClass("hidden");
+                            $("#CenaCalkowita").addClass("invisible");
+                        }
+                        $("#calkowita-cena-wartosc").text(response.KoszykCenaCalkowita);
+                        $("#koszyk-ilosc-pozycji").text(response.KoszykIloscPozycji);
+                    });
+                return false;
+            }
+        });
+    });
+
+    $(function() {
+        $(".wyczyscKoszyk").click(function() {
+            $.post("/Koszyk/UsunWszystkoZKoszyka",
+                function(response) {
+                    if (response.IloscPozycjiUsuwanej === 0) {
+                        $("#koszyk-wiersz-" + response.IdPozycjiUsuwanej).fadeOut('slow',
+                            function() {
+                                if (response.KoszykIloscPozycji === 0) {
+                                    $("#koszyk-pusty-wiadomosc").removeClass("hidden");
+                                }
+                            });
+                    }
+                    if (response.KoszykIloscPozycji === 0) {
+                        $("#koszyk-button-zaplac").addClass("hidden");
+                        $("#CenaCalkowita").addClass("invisible");
+                    }
+                    $("#calkowita-cena-wartosc").text(response.KoszykCenaCalkowita);
+                    $("#koszyk-ilosc-pozycji").text(response.KoszykIloscPozycji);
+                });
+        });
+    });
+     
+</script>

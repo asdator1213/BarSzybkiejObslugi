@@ -1,0 +1,131 @@
+﻿@model BarSzybkiejObsługiMVC.ViewModels.ZamowienieViewModel
+@{
+    ViewBag.Title = "Składanie zamówienia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (@Html.BeginForm())
+{
+
+    <h2>Podaj swoje dane</h2>
+    <div class="row">
+        <div class="col-md-6">
+
+            <div>
+                @Html.LabelFor(model => model.Imie)
+                @Html.TextBoxFor(model => model.Imie, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Imie)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Nazwisko)
+                @Html.TextBoxFor(model => model.Nazwisko, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Nazwisko)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Telefon)
+                @Html.TextBoxFor(model => model.Telefon, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Telefon)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Email)
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Komentarz)
+                @Html.TextAreaFor(model => model.Komentarz, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <h5><b>Wybierz typ płatności:</b></h5>
+                <div>@Html.RadioButtonFor(model => model.TypPlatnosci, 0, new { @checked = "checked" }) Gotówka</div>
+                <div>@Html.RadioButtonFor(model => model.TypPlatnosci, 1) Przelew</div>
+                <div>@Html.RadioButtonFor(model => model.TypPlatnosci, 2) Karta płatnicza</div>
+            </div>
+            <div style="margin-top: 20px; margin-left: 40px;">
+                <input type="submit" value="Złóż zamówienie" class="btn btn-info" />
+                @Html.ActionLink("Powrót", "Index", "Koszyk", null, new { @class = "btn btn-warning" })
+            </div>
+
+
+
+        </div>
+        <div class="col-md-6">
+            <div>
+                <h3>Twoje zamówienie</h3>
+            </div>
+            <table class="table table-striped">
+                <tr>
+                    <th>Produkt</th>
+                    <th>Ilosc</th>
+                    <th>Cena za sztukę</th>
+                </tr>
+                @foreach (var item in Model.PozycjeKoszyka)
+                {
+                    <tr>
+                        <td>@item.Produkt.NazwaProduktu</td>
+                        <td>@item.Ilosc</td>
+                        <td>@item.Produkt.Cena zł</td>
+                    </tr>
+                }
+            </table>
+            <div style="text-align: center">
+                <div id="przyblizony-czas" style="margin-top: 40px;">
+                    <h3>Przybliżony czas oczekiwania na zamówienie:<br /> @Model.CzasOczekiwania minut</h3>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3>Termin odbioru:<br /> <span id="termin">@Model.NaKiedy</span></h3>
+                </div>
+                <input type="button" id="zmiana-terminu-odbioru" value="Zmień termin odbioru" class="btn btn-info" />
+                @Html.TextBoxFor(model => model.NaKiedy, new { id = "datetimepicker", @class = "hidden form-control" })
+                <input type="button" id="anuluj" class="btn btn-warning hidden" value="Anuluj" />
+                <div>
+                    <h3>Kwota do zapłaty: @Model.WartoscZamowienia zł</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+}
+<script src="~/Scripts/jquery.datetimepicker.full.min.js"></script>
+<script>
+    $(function () {
+
+        var terminDocelowy = '';
+
+        $("#anuluj").click(function () {
+            $("#termin").text(terminDocelowy);
+            $("#przyblizony-czas").removeClass("hidden");
+            $("#datetimepicker").addClass("hidden");
+            $(this).addClass("hidden");
+            $("#zmiana-terminu-odbioru").removeClass("hidden");
+        });
+
+        $("#zmiana-terminu-odbioru").click(function () {
+
+            $(this).addClass("hidden");
+            terminDocelowy = '@Model.NaKiedy';
+
+            $("#datetimepicker").css({
+                "display": "block",
+                'margin': '20px auto'
+            }).removeClass("hidden");
+
+            $("#anuluj").removeClass("hidden");
+            $("#przyblizony-czas").addClass("hidden");
+
+            $("#datetimepicker").datetimepicker({
+                startDate: '@Model.NaKiedy',
+                minDate: '@DateTime.Now',
+                minTime: 0
+        });
+
+            $("#datetimepicker").change(function () {
+                var termin = $("#datetimepicker").val();
+                console.log(termin);
+                $("#termin").text(termin);
+            });
+
+        });
+    });
+</script>
