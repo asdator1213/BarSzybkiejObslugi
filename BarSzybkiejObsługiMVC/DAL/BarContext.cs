@@ -19,6 +19,7 @@ namespace BarSzybkiejObsługiMVC.DAL
         public DbSet<Produkt> Produkty { get; set; }
         public DbSet<Klient> Klienci { get; set; }
         public DbSet<Zamowienie> Zamowienia { get; set; }
+        public DbSet<Platnosc> Platnosci { get; set; }
         public DbSet<PozycjeZamowienia> PozycjeZamowienia { get; set; }
 
         static BarContext()

@@ -268,12 +268,21 @@
     <Compile Include="Migrations\201802251217124_WywalenieFieldsowzKategorii.Designer.cs">
       <DependentUpon>201802251217124_WywalenieFieldsowzKategorii.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802251246153_Tabela Platnosc.cs" />
+    <Compile Include="Migrations\201802251246153_Tabela Platnosc.Designer.cs">
+      <DependentUpon>201802251246153_Tabela Platnosc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802251300582_UpdatePlatnosci.cs" />
+    <Compile Include="Migrations\201802251300582_UpdatePlatnosci.Designer.cs">
+      <DependentUpon>201802251300582_UpdatePlatnosci.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DaneUzytkownika.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kategoria.cs" />
     <Compile Include="Models\Klient.cs" />
     <Compile Include="Models\Opisy.cs" />
+    <Compile Include="Models\Platnosc.cs" />
     <Compile Include="Models\PozycjaKoszyka.cs" />
     <Compile Include="Models\PozycjeZamowienia.cs" />
     <Compile Include="Models\Produkt.cs" />
@@ -326,6 +335,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802251217124_WywalenieFieldsowzKategorii.resx">
       <DependentUpon>201802251217124_WywalenieFieldsowzKategorii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802251246153_Tabela Platnosc.resx">
+      <DependentUpon>201802251246153_Tabela Platnosc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802251300582_UpdatePlatnosci.resx">
+      <DependentUpon>201802251300582_UpdatePlatnosci.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

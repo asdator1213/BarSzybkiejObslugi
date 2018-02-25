@@ -129,13 +129,14 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 Telefon = zamowienie.Klient.Telefon,
                 Email = zamowienie.Klient.Email,
                 PozycjeKoszyka = koszykManager.PobierzKoszyk(),
-                WartoscZamowienia = zamowienie.WartoscZamowienia,
+                WartoscZamowienia = zamowienie.Platnosc.Kwota,
                 DataDodania = zamowienie.DataDodania,
                 Komentarz = zamowienie.Komentarz,
                 StanZamowienia = zamowienie.StanZamowienia,
                 NaKiedy = zamowienie.NaKiedy,
-                TypPlatnosci = zamowienie.TypPlatnosci
+                TypPlatnosci = zamowienie.Platnosc.TypPlatnosci
             };
+
             //koszykManager.PustyKoszyk();
 
             zamowienieVM.CzasOczekiwania = zamowienieVM.PozycjeKoszyka

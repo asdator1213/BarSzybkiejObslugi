@@ -122,7 +122,11 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
                     Email = zamowienie.Email
                 },   
                 Komentarz = zamowienie.Komentarz,
-                NaKiedy = zamowienie.NaKiedy
+                NaKiedy = zamowienie.NaKiedy,
+                Platnosc = new Platnosc()
+                {
+                    TypPlatnosci = zamowienie.TypPlatnosci
+                }
             };
 
             db.Zamowienia.Add(zamowienieDoDodania);
@@ -146,17 +150,16 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
             }
 
             var czasPrzygotowania = koszyk.Max(p => p.Produkt.CzasPrzygotowania);
-            DateTime dt = zamowienieDoDodania.DataDodania;
-            //dt = dt.AddMinutes(czasPrzygotowania);
-            //zamowienieDoDodania.NaKiedy = dt;
 
-            zamowienieDoDodania.WartoscZamowienia = koszykWartosc;
+            zamowienieDoDodania.Platnosc.Kwota = koszykWartosc;
 
+            db.SaveChanges();
+            zamowienieDoDodania.PlatnoscId = zamowienieDoDodania.Platnosc.Id;
             db.SaveChanges();
 
             zamowienie.DataDodania = zamowienieDoDodania.DataDodania;
             zamowienie.PozycjeZamowienia = zamowienieDoDodania.PozycjeZamowienia;
-            zamowienie.WartoscZamowienia = zamowienieDoDodania.WartoscZamowienia;
+            zamowienie.WartoscZamowienia = zamowienieDoDodania.Platnosc.Kwota;
             zamowienie.ZamowienieId = zamowienieDoDodania.ZamowienieId;
 
             zamowienie.NaKiedy = zamowienieDoDodania.NaKiedy;
