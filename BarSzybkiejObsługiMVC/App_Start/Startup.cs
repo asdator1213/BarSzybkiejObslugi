@@ -1,5 +1,4 @@
-﻿using System;
-using BarSzybkiejObsługiMVC.App_Start;
+﻿using BarSzybkiejObsługiMVC.App_Start;
 using BarSzybkiejObsługiMVC.DAL;
 using BarSzybkiejObsługiMVC.Models;
 using Microsoft.AspNet.Identity;
@@ -7,6 +6,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
+using System;
 
 namespace IdentityExample
 {

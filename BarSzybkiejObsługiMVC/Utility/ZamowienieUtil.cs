@@ -2,8 +2,6 @@
 using BarSzybkiejObsługiMVC.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace BarSzybkiejObsługiMVC.Utility
 {
@@ -15,18 +13,18 @@ namespace BarSzybkiejObsługiMVC.Utility
             zamowienieDoDodania.DataDodania = DateTime.Now;
             zamowienieDoDodania.Klient = new Klient
             {
-                Imie = zamowienie.Imie,
+                Imie     = zamowienie.Imie,
                 Nazwisko = zamowienie.Nazwisko,
-                Telefon = zamowienie.Telefon,
-                Email = zamowienie.Email
+                Telefon  = zamowienie.Telefon,
+                Email    = zamowienie.Email
             };
             zamowienieDoDodania.Komentarz = zamowienie.Komentarz;
-            zamowienieDoDodania.NaKiedy = zamowienie.NaKiedy;
+            zamowienieDoDodania.NaKiedy   = zamowienie.NaKiedy;
             zamowienieDoDodania.Platnosc = new Platnosc()
             {
                 TypPlatnosci = zamowienie.TypPlatnosci
             };
-            zamowienieDoDodania.KodZamowienia = CodeGenerator.Generate();
+            zamowienieDoDodania.KodZamowienia     = CodeGenerator.Generate();
             zamowienieDoDodania.PozycjeZamowienia = new List<PozycjeZamowienia>();
         }
 
@@ -39,7 +37,7 @@ namespace BarSzybkiejObsługiMVC.Utility
                 var nowaPozycjaZamowienia = new PozycjeZamowienia()
                 {
                     ProduktyId = koszykElement.Produkt.ProduktId,
-                    Ilosc = koszykElement.Ilosc,
+                    Ilosc      = koszykElement.Ilosc,
                     CenaZakupu = koszykElement.Produkt.Cena
                 };
 
@@ -52,13 +50,12 @@ namespace BarSzybkiejObsługiMVC.Utility
         public static void UzupelnijZamowienieViewModel(this ZamowienieViewModel zamowienie,
             Zamowienie zamowienieDoDodania)
         {
-            zamowienie.DataDodania = zamowienieDoDodania.DataDodania;
+            zamowienie.DataDodania       = zamowienieDoDodania.DataDodania;
             zamowienie.PozycjeZamowienia = zamowienieDoDodania.PozycjeZamowienia;
             zamowienie.WartoscZamowienia = zamowienieDoDodania.Platnosc.Kwota;
-            zamowienie.ZamowienieId = zamowienieDoDodania.ZamowienieId;
-
-            zamowienie.NaKiedy = zamowienieDoDodania.NaKiedy;
-            zamowienie.KodZamowienia = zamowienieDoDodania.KodZamowienia;
+            zamowienie.ZamowienieId      = zamowienieDoDodania.ZamowienieId;
+            zamowienie.NaKiedy           = zamowienieDoDodania.NaKiedy;
+            zamowienie.KodZamowienia     = zamowienieDoDodania.KodZamowienia;
         }
     }
 }

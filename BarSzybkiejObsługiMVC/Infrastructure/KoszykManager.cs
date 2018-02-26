@@ -1,11 +1,9 @@
 ﻿using BarSzybkiejObsługiMVC.DAL;
 using BarSzybkiejObsługiMVC.Models;
-using System;
+using BarSzybkiejObsługiMVC.Utility;
+using BarSzybkiejObsługiMVC.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using BarSzybkiejObsługiMVC.ViewModels;
-using BarSzybkiejObsługiMVC.Utility;
 
 namespace BarSzybkiejObsługiMVC.Infrastructure
 {
@@ -119,6 +117,13 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
             zamowienieDoDodania.PlatnoscId = zamowienieDoDodania.Platnosc.Id;
             db.SaveChanges();
             zamowienie.UzupelnijZamowienieViewModel(zamowienieDoDodania);
+            zamowienie.PozycjeKoszyka = koszyk;
+
+            var mail = new MailViewModel
+            {
+                Zamowienie = zamowienie
+            };
+            mail.Send();
 
             return zamowienie;
         }

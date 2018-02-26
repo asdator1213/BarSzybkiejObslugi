@@ -1,11 +1,7 @@
 ﻿using BarSzybkiejObsługiMVC.Migrations;
 using BarSzybkiejObsługiMVC.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
-using System.Linq;
-using System.Web;
 
 namespace BarSzybkiejObsługiMVC.DAL
 {

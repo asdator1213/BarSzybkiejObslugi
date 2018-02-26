@@ -1,12 +1,12 @@
-﻿using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using BarSzybkiejObsługiMVC.App_Start;
+﻿using BarSzybkiejObsługiMVC.App_Start;
 using BarSzybkiejObsługiMVC.Models;
 using BarSzybkiejObsługiMVC.ViewModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Mvc;
 
 namespace BarSzybkiejObsługiMVC.Controllers
 {

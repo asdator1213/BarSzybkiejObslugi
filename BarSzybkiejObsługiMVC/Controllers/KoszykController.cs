@@ -1,16 +1,12 @@
-﻿using BarSzybkiejObsługiMVC.DAL;
+﻿using BarSzybkiejObsługiMVC.App_Start;
+using BarSzybkiejObsługiMVC.DAL;
 using BarSzybkiejObsługiMVC.Infrastructure;
 using BarSzybkiejObsługiMVC.ViewModels;
+using Microsoft.AspNet.Identity.Owin;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using BarSzybkiejObsługiMVC.App_Start;
-using BarSzybkiejObsługiMVC.Models;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
 
 
 namespace BarSzybkiejObsługiMVC.Controllers
@@ -146,6 +142,8 @@ namespace BarSzybkiejObsługiMVC.Controllers
 
             return View(zamowienieVM);
         }
+
+        
 
     }
 }

@@ -1,11 +1,7 @@
 ﻿using BarSzybkiejObsługiMVC.Models;
-using System;
-using System.Collections.Generic;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Web;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BarSzybkiejObsługiMVC.DAL
 {

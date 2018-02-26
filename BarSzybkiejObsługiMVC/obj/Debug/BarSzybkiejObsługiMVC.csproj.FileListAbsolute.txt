@@ -207,3 +207,8 @@ C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.TabelaPlatnosc.resources
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.UpdatePlatnosci.resources
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.KodZamowienia.resources
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Postal.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\RazorEngine.dll
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Postal.xml
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\RazorEngine.pdb
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\RazorEngine.xml

@@ -1,9 +1,7 @@
-﻿using System;
+﻿using BarSzybkiejObsługiMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using BarSzybkiejObsługiMVC.Models;
 
 namespace BarSzybkiejObsługiMVC.ViewModels
 {
@@ -38,8 +36,6 @@ namespace BarSzybkiejObsługiMVC.ViewModels
         public DateTime NaKiedy { get; set; }
         public List<PozycjeZamowienia> PozycjeZamowienia { get; set; }
         public List<PozycjaKoszyka> PozycjeKoszyka { get; set; }
-
-
         public TypPlatnosci TypPlatnosci { get; set; }
 
     }
