@@ -2,19 +2,19 @@
 {
     public static class Smsing
     {
-        public static void Sender()
+        public static void Sender(string message, string number)
         {
             try
             {
-                SMSApi.Api.Client client = new SMSApi.Api.Client("mail_konto");
-                client.SetPasswordHash("pass_hash");
+                SMSApi.Api.Client client = new SMSApi.Api.Client("EMAIL");
+                client.SetPasswordHash("PASS");
 
                 var smsApi = new SMSApi.Api.SMSFactory(client);
 
                 var result =
                     smsApi.ActionSend()
-                        .SetText("Elo, piszę z baru xd")
-                        .SetTo("numer_odbiorcy")
+                        .SetText(message)
+                        .SetTo(number)
                         .SetSender("ECO") //Pole nadawcy lub typ wiadomość 'ECO', '2Way'
                         .Execute();
 

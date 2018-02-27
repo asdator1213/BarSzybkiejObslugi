@@ -103,6 +103,24 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
             return ilosc;
         }
 
+        private bool CzyKlientIstnieje(Klient klient)
+        {
+            var result = db.Klienci
+                .Any(k => k.Imie == klient.Imie
+                    && k.Nazwisko == klient.Nazwisko
+                    && k.Telefon == klient.Telefon
+                    && k.Email == klient.Email);
+            return result;
+        }
+
+        private int ZwrocIdKlienta(Klient klient)
+        {
+            return db.Klienci.First(k=> k.Imie==klient.Imie 
+                    && k.Nazwisko == klient.Nazwisko
+                    && k.Telefon == klient.Telefon
+                    && k.Email == klient.Email).Id;
+        }
+
         public ZamowienieViewModel UtworzZamowienie(ZamowienieViewModel zamowienie)
         {
             var koszyk = PobierzKoszyk();

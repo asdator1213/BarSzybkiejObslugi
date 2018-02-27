@@ -1,11 +1,8 @@
-﻿using BarSzybkiejObsługiMVC.App_Start;
-using BarSzybkiejObsługiMVC.DAL;
+﻿using BarSzybkiejObsługiMVC.DAL;
 using BarSzybkiejObsługiMVC.Infrastructure;
 using BarSzybkiejObsługiMVC.ViewModels;
-using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 
@@ -17,26 +14,11 @@ namespace BarSzybkiejObsługiMVC.Controllers
         private ISessionManager sessionManager { get; set; }
         private BarContext db;
 
-        private ApplicationUserManager _userManager;
-
-        public ApplicationUserManager UserManager
-        {
-            get
-            {
-                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            }
-            private set
-            {
-                _userManager = value;
-            }
-        }
-
         public KoszykController()
         {
             db = new BarContext();
             sessionManager = new SessionManager();
             koszykManager = new KoszykManager(sessionManager, db);
-
         }
 
         public ActionResult Index()
@@ -139,6 +121,12 @@ namespace BarSzybkiejObsługiMVC.Controllers
 
             zamowienieVM.CzasOczekiwania = zamowienieVM.PozycjeKoszyka
                 .Max(x => x.Produkt.CzasPrzygotowania);
+
+            var message = $"Zamówienie zostało przyjęte. Kwota do zapłaty: " +
+                $"{zamowienie.Platnosc.Kwota}zł, Termin odbioru: {zamowienie.NaKiedy}," +
+                $" Kod zamówienia: {zamowienie.KodZamowienia}";
+
+            //Smsing.Sender(message, zamowienie.Klient.Telefon);
 
             return View(zamowienieVM);
         }
