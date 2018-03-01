@@ -339,37 +339,9 @@
     <Compile Include="Infrastructure\ISessionManager.cs" />
     <Compile Include="Infrastructure\KoszykManager.cs" />
     <Compile Include="Infrastructure\SessionManager.cs" />
-    <Compile Include="Migrations\201802211251569_BrandNewMigration.cs" />
-    <Compile Include="Migrations\201802211251569_BrandNewMigration.Designer.cs">
-      <DependentUpon>201802211251569_BrandNewMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802211508232_Klient.cs" />
-    <Compile Include="Migrations\201802211508232_Klient.Designer.cs">
-      <DependentUpon>201802211508232_Klient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802221757544_NaKiedyZamowienie.cs" />
-    <Compile Include="Migrations\201802221757544_NaKiedyZamowienie.Designer.cs">
-      <DependentUpon>201802221757544_NaKiedyZamowienie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802251146268_Initial.cs" />
-    <Compile Include="Migrations\201802251146268_Initial.Designer.cs">
-      <DependentUpon>201802251146268_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802251217124_WywalenieFieldsowzKategorii.cs" />
-    <Compile Include="Migrations\201802251217124_WywalenieFieldsowzKategorii.Designer.cs">
-      <DependentUpon>201802251217124_WywalenieFieldsowzKategorii.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802251246153_Tabela Platnosc.cs" />
-    <Compile Include="Migrations\201802251246153_Tabela Platnosc.Designer.cs">
-      <DependentUpon>201802251246153_Tabela Platnosc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802251300582_UpdatePlatnosci.cs" />
-    <Compile Include="Migrations\201802251300582_UpdatePlatnosci.Designer.cs">
-      <DependentUpon>201802251300582_UpdatePlatnosci.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802251819419_KodZamowienia.cs" />
-    <Compile Include="Migrations\201802251819419_KodZamowienia.Designer.cs">
-      <DependentUpon>201802251819419_KodZamowienia.cs</DependentUpon>
+    <Compile Include="Migrations\201803011144145_new.cs" />
+    <Compile Include="Migrations\201803011144145_new.Designer.cs">
+      <DependentUpon>201803011144145_new.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DaneUzytkownika.cs" />
@@ -429,29 +401,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802211251569_BrandNewMigration.resx">
-      <DependentUpon>201802211251569_BrandNewMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802211508232_Klient.resx">
-      <DependentUpon>201802211508232_Klient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802221757544_NaKiedyZamowienie.resx">
-      <DependentUpon>201802221757544_NaKiedyZamowienie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802251146268_Initial.resx">
-      <DependentUpon>201802251146268_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802251217124_WywalenieFieldsowzKategorii.resx">
-      <DependentUpon>201802251217124_WywalenieFieldsowzKategorii.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802251246153_Tabela Platnosc.resx">
-      <DependentUpon>201802251246153_Tabela Platnosc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802251300582_UpdatePlatnosci.resx">
-      <DependentUpon>201802251300582_UpdatePlatnosci.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802251819419_KodZamowienia.resx">
-      <DependentUpon>201802251819419_KodZamowienia.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803011144145_new.resx">
+      <DependentUpon>201803011144145_new.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

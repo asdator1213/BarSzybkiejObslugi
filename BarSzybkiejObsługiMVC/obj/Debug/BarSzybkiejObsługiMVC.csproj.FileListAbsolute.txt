@@ -195,18 +195,9 @@ C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Helpers.xml
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Web.Mvc.xml
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csprojResolveAssemblyReference.cache
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.BrandNewMigration.resources
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.Klient.resources
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.NaKiedyZamowienie.resources
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csproj.GenerateResource.Cache
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csproj.CoreCompileInputs.cache
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.dll
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.pdb
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.Initial.resources
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.WywalenieFieldsowzKategorii.resources
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.TabelaPlatnosc.resources
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.UpdatePlatnosci.resources
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.KodZamowienia.resources
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Postal.dll
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\RazorEngine.dll
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Postal.xml
@@ -342,4 +333,5 @@ C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Extensions.Primitives.xml
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\SMSApi.dll
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.ZmianaForeignKeyPozycjeZamowienia.resources
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations._new.resources
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csproj.GenerateResource.Cache

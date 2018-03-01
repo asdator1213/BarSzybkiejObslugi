@@ -141,7 +141,7 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
             {
                 Zamowienie = zamowienie
             };
-            mail.Send();
+            //mail.Send();
 
             return zamowienie;
         }

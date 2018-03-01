@@ -5,28 +5,65 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Zamówienie # @Model.ZamowienieId</h2>
 <div class="row">
-    <h3 class="col-md-6">Kod: @Model.KodZamowienia</h3>
-    <h3 class="col-md-6">Wartość zamówienia: @Model.Platnosc.Kwota</h3>
+    <h2 class="col-md-6">Zamówienie # @Model.ZamowienieId</h2>
+    <h2 class="col-md-6">Wartość zamówienia: @Model.Platnosc.Kwota zł</h2>
 </div>
 
 <div class="row">
-    <div class="col-md-6"></div>
-    <div class="col-md-6">Stan zamówienia: @Model.StanZamowienia</div>
+    <h3 class="col-md-6">Kod: @Model.KodZamowienia</h3>
+    <div class="col-md-6">
+        <div class="row">
+            <h4 class="col-md-6">Stan zamówienia: @Model.StanZamowienia</h4>
+            <div class="col-md-6">
+                @Html.ActionLink("Zmień status", "Status", "Zamowienia", new { id = Model.ZamowienieId }, new { @class = "btn btn-info" })
+            </div>
+        </div>
+    </div>
 </div>
-<table class="table table-striped">
-    <tr>
-        <th>Produkt</th>
-        <th>Ilosc</th>
-        <th>Cena za sztukę</th>
-    </tr>
-    @foreach (var item in Model.PozycjeZamowienia)
-    {
-        <tr>
-            <td>@item.Produkt.NazwaProduktu</td>
-            <td>@item.Ilosc</td>
-            <td>@item.Produkt.Cena zł</td>
-        </tr>
-    }
-</table>
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>Zawartość zamówienia</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>Produkt</th>
+                <th>Ilosc</th>
+                <th>Cena za sztukę</th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model.PozycjeZamowienia)
+            {
+            <tr>
+                <td>@item.Produkt.NazwaProduktu</td>
+                <td>@item.Ilosc</td>
+                <td>@item.Produkt.Cena zł</td>
+                <td>@Html.ActionLink("Usuń", "UsuńProdukt", "Zamowienia", new { zamowienieId = Model.ZamowienieId, produktId=item.ProduktId}, new { @class = "btn btn-danger" })</td>
+            </tr>
+            }
+        </table>
+        <center>
+            @Html.ActionLink("Dodaj produkt do zamówienia", "DodajProdukt", "Zamowienia", new { id = Model.ZamowienieId }, new { @class = "btn btn-info" })
+            
+        </center>
+        
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Dane klienta</h3>
+                <h4>Imię i nazwisko: @Model.Klient.Imie @Model.Klient.Nazwisko</h4>
+                <h4>Numer kontaktowy: @Model.Klient.Telefon</h4>
+                <h4>Adres e-mail: @Model.Klient.Email</h4>
+                <h4>Komentarz: @Model.Komentarz</h4>
+            </div>
+            <div class="col-md-6" style="position:relative">
+                @Html.ActionLink("Zmień dane klienta", "Klient", "Zamowienia", new { id = Model.KlientId }, new { @class = "btn btn-info", style = "position:absolute;bottom:-100px" })
+            </div>
+        </div>
+
+    </div>
+    <center><h3>Planowany termin odbioru: @Model.NaKiedy</h3></center>
+    <center>@Html.ActionLink("Zmień termin odbioru", "Termin", "Zamowienia", new { id = Model.ZamowienieId }, new { @class = "btn btn-info" })</center>
+    <center>@Html.ActionLink("Powrót", "Index", "Zamowienia", null, new { @class = "btn btn-warning" })</center>
+</div>

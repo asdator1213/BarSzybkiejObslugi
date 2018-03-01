@@ -16,7 +16,8 @@ namespace BarSzybkiejObsługiMVC.Controllers
 
         public ActionResult Szczegoly(int id)
         {
-            var zamowienie = db.Zamowienia.Find(id);
+            var zamowienie = db.Zamowienia
+                .Include("PozycjeZamowienia").SingleOrDefault(p=>p.ZamowienieId==id);
             return View(zamowienie);
         }
     }

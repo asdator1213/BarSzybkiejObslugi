@@ -2,9 +2,9 @@
 {
     public enum StanZamowienia
     {
-        Nowe,
+        Przyjete,
         Zrealizowane,
-        Opóźnione,
+        Opoznione,
         Niezrealizowane
     }
 }

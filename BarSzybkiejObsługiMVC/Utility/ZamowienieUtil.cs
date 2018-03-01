@@ -85,7 +85,7 @@ namespace BarSzybkiejObsługiMVC.Utility
             {
                 var nowaPozycjaZamowienia = new PozycjeZamowienia()
                 {
-                    ProduktyId = koszykElement.Produkt.ProduktId,
+                    ProduktId = koszykElement.Produkt.ProduktId,
                     Ilosc = koszykElement.Ilosc,
                     CenaZakupu = koszykElement.Produkt.Cena
                 };
