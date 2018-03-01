@@ -1,0 +1,32 @@
+﻿@model BarSzybkiejObsługiMVC.Models.Zamowienie
+
+@{
+    ViewBag.Title = "Szczegoly";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Zamówienie # @Model.ZamowienieId</h2>
+<div class="row">
+    <h3 class="col-md-6">Kod: @Model.KodZamowienia</h3>
+    <h3 class="col-md-6">Wartość zamówienia: @Model.Platnosc.Kwota</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">Stan zamówienia: @Model.StanZamowienia</div>
+</div>
+<table class="table table-striped">
+    <tr>
+        <th>Produkt</th>
+        <th>Ilosc</th>
+        <th>Cena za sztukę</th>
+    </tr>
+    @foreach (var item in Model.PozycjeZamowienia)
+    {
+        <tr>
+            <td>@item.Produkt.NazwaProduktu</td>
+            <td>@item.Ilosc</td>
+            <td>@item.Produkt.Cena zł</td>
+        </tr>
+    }
+</table>

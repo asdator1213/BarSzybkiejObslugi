@@ -329,6 +329,7 @@
     <Compile Include="Controllers\KategorieController.cs" />
     <Compile Include="Controllers\KoszykController.cs" />
     <Compile Include="Controllers\ProduktyController.cs" />
+    <Compile Include="Controllers\ZamowieniaController.cs" />
     <Compile Include="DAL\BarContext.cs" />
     <Compile Include="DAL\BarInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -415,6 +416,8 @@
     <Content Include="Views\Emails\MailViewModel.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Zamowienia\Index.cshtml" />
+    <Content Include="Views\Zamowienia\Szczegoly.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
