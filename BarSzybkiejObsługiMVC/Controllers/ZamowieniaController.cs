@@ -8,12 +8,16 @@ namespace BarSzybkiejObsługiMVC.Controllers
     {
         private BarContext db = new BarContext();
 
+        //Authorize
+        [Authorize(Roles = "Pracownik")]
         public ActionResult Index()
         {
             var zamowienia = db.Zamowienia.ToList();
             return View(zamowienia);
         }
 
+        //Authorize
+        [Authorize(Roles = "Pracownik")]
         public ActionResult Szczegoly(int id)
         {
             var zamowienie = db.Zamowienia

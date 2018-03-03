@@ -317,6 +317,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\signalr.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -330,6 +331,7 @@
     <Compile Include="Controllers\KoszykController.cs" />
     <Compile Include="Controllers\ProduktyController.cs" />
     <Compile Include="Controllers\ZamowieniaController.cs" />
+    <Compile Include="DAL\ApplicationUser.cs" />
     <Compile Include="DAL\BarContext.cs" />
     <Compile Include="DAL\BarInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -339,13 +341,11 @@
     <Compile Include="Infrastructure\ISessionManager.cs" />
     <Compile Include="Infrastructure\KoszykManager.cs" />
     <Compile Include="Infrastructure\SessionManager.cs" />
-    <Compile Include="Migrations\201803011144145_new.cs" />
-    <Compile Include="Migrations\201803011144145_new.Designer.cs">
-      <DependentUpon>201803011144145_new.cs</DependentUpon>
+    <Compile Include="Migrations\201803031923310_nowa.cs" />
+    <Compile Include="Migrations\201803031923310_nowa.Designer.cs">
+      <DependentUpon>201803031923310_nowa.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\DaneUzytkownika.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kategoria.cs" />
     <Compile Include="Models\Klient.cs" />
     <Compile Include="Models\Opisy.cs" />
@@ -390,6 +390,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Zamowienia\Index.cshtml" />
     <Content Include="Views\Zamowienia\Szczegoly.cshtml" />
+    <Content Include="Views\Produkty\Edytuj.cshtml" />
+    <Content Include="Views\Produkty\Wszystko.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -401,8 +403,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803011144145_new.resx">
-      <DependentUpon>201803011144145_new.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803031923310_nowa.resx">
+      <DependentUpon>201803031923310_nowa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

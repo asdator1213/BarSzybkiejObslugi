@@ -1,0 +1,53 @@
+﻿@model BarSzybkiejObsługiMVC.Models.Produkt
+
+
+@{
+    ViewBag.Title = "Edytuj";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Edytuj produkt: @Model.NazwaProduktu</h3>
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.ProduktId)
+    @Html.HiddenFor(model => model.Ukryty)
+    @Html.HiddenFor(model => model.Polecany)
+    @Html.HiddenFor(model => model.OpisyId)
+    @Html.HiddenFor(model => model.NazwaPlikuObrazka)
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.NazwaProduktu)
+            @Html.TextBoxFor(model => model.NazwaProduktu, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.NazwaProduktu)
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Opisy.Opis)
+            @Html.TextAreaFor(model => model.Opisy.Opis, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Opisy.Opis)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Cena)
+            @Html.TextBoxFor(model => model.Cena, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Cena)
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.CzasPrzygotowania)
+            @Html.TextBoxFor(model => model.CzasPrzygotowania, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.CzasPrzygotowania)
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-2" style="padding-right:0px">
+            <input type="submit" value="Zapisz produkt" class="btn btn-info" />
+        </div>
+        <div class="col-md-1" style="padding-left:0px;">
+            @Html.ActionLink("Powrót", "Szczegoly", "Produkty", new { id = Model.ProduktId }, new { @class = "btn btn-warning" })
+        </div>
+    </div>
+}
+

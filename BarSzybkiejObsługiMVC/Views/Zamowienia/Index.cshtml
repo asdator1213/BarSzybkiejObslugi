@@ -5,10 +5,14 @@
 }
 
 <h2>Wszystkie zamówienia</h2>
-@Html.ActionLink("Dodaj nowe zamówienie", "Zamowienia", "Dodaj", null, new { @class= "btn btn-info"})
+<div style="margin:20px 0">
+    <div style = "float:left">@Html.ActionLink("Dodaj nowe zamówienie", "Zamowienia", "Dodaj", null, new { @class = "btn btn-info" })</div>
+    <div style="margin-left:50px;float:left"><input type="text" class="form-control" placeholder="Wpisz kod zamówienia"/></div>
+    <div style="clear:both"></div>
+</div>
 
 <div class="row">
-    <table class="table table-hover col-xs-12">
+    <table id="lista-zamowien" class="table table-hover col-xs-12">
         <tr>
             <td>Id zamówienia</td>
             <td>Data dodania</td>
@@ -39,4 +43,3 @@
 
     </table>
 </div>
-

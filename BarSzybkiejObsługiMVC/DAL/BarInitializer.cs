@@ -1,5 +1,7 @@
 ﻿using BarSzybkiejObsługiMVC.Migrations;
 using BarSzybkiejObsługiMVC.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 
@@ -50,6 +52,62 @@ namespace BarSzybkiejObsługiMVC.DAL
             );
 
             context.SaveChanges();
+
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+            CreateAdmin(roleManager, userManager);
+            CreateUsers(roleManager, userManager);
+        }
+
+
+        private static void CreateAdmin(RoleManager<IdentityRole> _roleManager,
+            UserManager<ApplicationUser> _userManager)
+        {
+            var roleManager = _roleManager;
+            var userManager = _userManager;
+
+            if (!roleManager.RoleExists("Admin"))
+            {
+                var role = new IdentityRole("Admin");
+                roleManager.Create(role);
+
+                var user = new ApplicationUser();
+                user.UserName = "admin";
+                user.Email = "admin@admin.com";
+
+                var createUserResult = userManager.Create(user, "Admin123***");
+
+                //Add default User to Role Admin   
+                if (createUserResult.Succeeded)
+                {
+                    var addToRoleResult = userManager.AddToRole(user.Id, "Admin");
+
+                }
+            }
+        }
+
+        private static void CreateUsers(RoleManager<IdentityRole> _roleManager,
+            UserManager<ApplicationUser> _userManager)
+        {
+            var roleManager = _roleManager;
+            var userManager = _userManager;
+
+            if(!roleManager.RoleExists("Pracownik"))
+            {
+                var role = new IdentityRole("Pracownik");
+                roleManager.Create(role);
+
+                var user = new ApplicationUser();
+                user.UserName = "Pracownik1";
+                user.Email = "pracownik1@pracownik.com";
+
+                var createUserResult = userManager.Create(user, "Pracownik1***");
+                if(createUserResult.Succeeded)
+                {
+                    var addToRoleResult = userManager.AddToRole(user.Id, "Pracownik");
+                }
+            }
         }
     }
 }

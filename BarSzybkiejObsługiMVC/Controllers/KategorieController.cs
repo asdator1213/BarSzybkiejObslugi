@@ -11,7 +11,8 @@ namespace BarSzybkiejObsługiMVC.Controllers
         public ActionResult ListaProduktow(string kategoria)
         {
             var produktyKategorii = db.Produkty
-                .Where(p => p.Kategoria.NazwaKategorii.Equals(kategoria)).ToList();
+                .Where(p=>p.Ukryty!=true 
+                && p.Kategoria.NazwaKategorii == kategoria).ToList();
 
             return View(produktyKategorii);
         }

@@ -86,8 +86,6 @@ namespace BarSzybkiejObsługiMVC.Controllers
             if (ModelState.IsValid)
             {
                 var noweZamowienie = koszykManager.UtworzZamowienie(zamowienie);
-                //koszykManager.PustyKoszyk();
-
                 return RedirectToAction("PotwierdzenieZamowienia", new { nrZamowienia = noweZamowienie.ZamowienieId });
             }
 
@@ -117,7 +115,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
                
             };
 
-            //koszykManager.PustyKoszyk();
+            koszykManager.PustyKoszyk();
 
             zamowienieVM.CzasOczekiwania = zamowienieVM.PozycjeKoszyka
                 .Max(x => x.Produkt.CzasPrzygotowania);
@@ -127,7 +125,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 $" Kod zamówienia: {zamowienie.KodZamowienia}";
 
             //Smsing.Sender(message, zamowienie.Klient.Telefon);
-
+            
             return View(zamowienieVM);
         }
 

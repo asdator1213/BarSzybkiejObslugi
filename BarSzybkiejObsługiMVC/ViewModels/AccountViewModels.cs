@@ -4,9 +4,8 @@ namespace BarSzybkiejObsługiMVC.ViewModels
 {
     public class LoginViewModel
     {
-        [Required(ErrorMessage = "Musisz wprowadzić adres e-mail.")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Required(ErrorMessage = "Musisz wprowadzić nazwę użytkownika.")]
+        public string Username { get; set; }
 
         [Required(ErrorMessage = "Musisz wprowadzić hasło.")]
         [DataType(DataType.Password)]

@@ -4,7 +4,7 @@ namespace BarSzybkiejObsługiMVC.Models
 {
     public class Opisy
     {
-        public int Id { get; set; }
+        public int OpisyId { get; set; }
         public string Opis { get; set; }
         public string OpisKrotki { get; set; }
 

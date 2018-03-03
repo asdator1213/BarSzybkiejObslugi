@@ -48,7 +48,25 @@
             <div>
                 <div style="margin-top: 50px;" class="row">
                     <div class="col-md-4">
-                        @Html.ActionLink("Dodaj do koszyka", "DodajDoKoszyka", "Koszyk", new { id = Model.ProduktId }, new { @class = "btn btn-info koszykDodaj" })
+                        @{
+                            if (Request.IsAuthenticated && User.IsInRole("Pracownik"))
+                            {
+                                @Html.ActionLink("Edytuj produkt", "Edytuj", "Produkty", new { id = Model.ProduktId }, new { @class = "btn btn-info koszykDodaj" })
+                                if (!Model.Ukryty)
+                                {
+                                    @Html.ActionLink("Ukryj produkt", "Ukryj", "Produkty", new { id = Model.ProduktId }, new { @class = "btn btn-danger koszykDodaj", style = "margin-top:20px;" })
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("Pokaż produkt", "Pokaz", "Produkty", new { id = Model.ProduktId }, new { @class = "btn btn-success koszykDodaj", style = "margin-top:20px;" })
+                                }
+
+                            }
+                            else
+                            {
+                                @Html.ActionLink("Dodaj do koszyka", "DodajDoKoszyka", "Koszyk", new { id = Model.ProduktId }, new { @class = "btn btn-info koszykDodaj" })
+                            }
+                        }
                     </div>
                     <div class="col-md-4">
                         @Html.ActionLink("Powrót", null, null, new { href = Request.UrlReferrer, @class = "btn btn-warning koszykDodaj" })

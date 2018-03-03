@@ -1,5 +1,5 @@
 ﻿using BarSzybkiejObsługiMVC.App_Start;
-using BarSzybkiejObsługiMVC.Models;
+using BarSzybkiejObsługiMVC.DAL;
 using BarSzybkiejObsługiMVC.ViewModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -69,6 +69,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
         // GET: Account
         public ActionResult Login(string returnUrl)
         {
+            Session["PreviousPage"] = returnUrl;
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -81,13 +82,20 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 return View(model);
             }
 
+            var url = Session["PreviousPage"];
+
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    {
+                        if (url != null)
+                            return RedirectToLocal(url.ToString());
+                        else
+                            return RedirectToAction("Index", "Home", new { area=""});
+                    }    
                 default:
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
@@ -105,7 +113,6 @@ namespace BarSzybkiejObsługiMVC.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                //user.DaneUzytkownika = new DaneUzytkownika();
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

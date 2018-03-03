@@ -34,36 +34,33 @@
             </tr>
             @foreach (var item in Model.PozycjeZamowienia)
             {
-            <tr>
-                <td>@item.Produkt.NazwaProduktu</td>
-                <td>@item.Ilosc</td>
-                <td>@item.Produkt.Cena zł</td>
-                <td>@Html.ActionLink("Usuń", "UsuńProdukt", "Zamowienia", new { zamowienieId = Model.ZamowienieId, produktId=item.ProduktId}, new { @class = "btn btn-danger" })</td>
-            </tr>
+                <tr>
+                    <td>@item.Produkt.NazwaProduktu</td>
+                    <td>@item.Ilosc</td>
+                    <td>@item.Produkt.Cena zł</td>
+                    <td>@Html.ActionLink("Usuń", "UsuńProdukt", "Zamowienia", new { zamowienieId = Model.ZamowienieId, produktId = item.ProduktId }, new { @class = "btn btn-danger" })</td>
+                </tr>
             }
+
         </table>
-        <center>
-            @Html.ActionLink("Dodaj produkt do zamówienia", "DodajProdukt", "Zamowienia", new { id = Model.ZamowienieId }, new { @class = "btn btn-info" })
-            
-        </center>
-        
+        <h4>Komentarz: @Html.TextAreaFor(model => model.Komentarz, new { @class = "form-control" })</h4>
     </div>
     <div class="col-md-6">
         <div class="row">
+            <h3>Dane klienta</h3>
             <div class="col-md-6">
-                <h3>Dane klienta</h3>
-                <h4>Imię i nazwisko: @Model.Klient.Imie @Model.Klient.Nazwisko</h4>
-                <h4>Numer kontaktowy: @Model.Klient.Telefon</h4>
-                <h4>Adres e-mail: @Model.Klient.Email</h4>
-                <h4>Komentarz: @Model.Komentarz</h4>
+
+                <h4>Imię: @Html.TextBoxFor(model => model.Klient.Imie, new { @class = "form-control" })</h4>
+                <h4>Numer kontaktowy: @Html.TextBoxFor(model => model.Klient.Telefon, new { @class = "form-control" })</h4>
             </div>
-            <div class="col-md-6" style="position:relative">
-                @Html.ActionLink("Zmień dane klienta", "Klient", "Zamowienia", new { id = Model.KlientId }, new { @class = "btn btn-info", style = "position:absolute;bottom:-100px" })
+            <div class="col-md-6">
+                <h4>Nazwisko: @Html.TextBoxFor(model => model.Klient.Nazwisko, new { @class = "form-control" })</h4>
+                <h4>Adres e-mail: @Html.TextBoxFor(model => model.Klient.Email, new { @class = "form-control" })</h4>
             </div>
         </div>
-
+        <center><h3>Planowany termin odbioru: @Html.TextBoxFor(model => model.NaKiedy, new { @class = "form-control" })</h3></center>
     </div>
-    <center><h3>Planowany termin odbioru: @Model.NaKiedy</h3></center>
-    <center>@Html.ActionLink("Zmień termin odbioru", "Termin", "Zamowienia", new { id = Model.ZamowienieId }, new { @class = "btn btn-info" })</center>
+
+    <center>@Html.ActionLink("Zapisz", "Termin", "Zamowienia", new { id = Model.ZamowienieId }, new { @class = "btn btn-info" })</center>
     <center>@Html.ActionLink("Powrót", "Index", "Zamowienia", null, new { @class = "btn btn-warning" })</center>
 </div>

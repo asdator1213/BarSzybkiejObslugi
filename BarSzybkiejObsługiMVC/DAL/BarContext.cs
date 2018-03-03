@@ -21,6 +21,7 @@ namespace BarSzybkiejObsługiMVC.DAL
         static BarContext()
         {
             Database.SetInitializer(new BarInitializer()); 
+
         }
 
         public static BarContext Create()

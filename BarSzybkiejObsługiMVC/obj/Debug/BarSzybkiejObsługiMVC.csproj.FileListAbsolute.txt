@@ -333,5 +333,5 @@ C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\Microsoft.Extensions.Primitives.xml
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\bin\SMSApi.dll
-C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations._new.resources
+C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.Migrations.nowa.resources
 C:\Users\asdator1213\Documents\Visual Studio 2017\Projects\BarSzybkiejObslugiMVC\BarSzybkiejObsługiMVC\obj\Debug\BarSzybkiejObsługiMVC.csproj.GenerateResource.Cache

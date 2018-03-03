@@ -7,9 +7,11 @@ namespace BarSzybkiejObsługiMVC.Models
         public int ProduktId { get; set; }
 
         [Required(ErrorMessage = "Podaj nazwę produktu.")]
+        [Display(Name ="Nazwa produktu")]
         public string NazwaProduktu { get; set; }
 
         [Required(ErrorMessage = "Podaj cenę za produkt.")]
+        [Display(Name = "Cena za produkt")]
         public decimal Cena { get; set; }
 
         [Required(ErrorMessage = "Podaj czas przygotowania produktu.")]

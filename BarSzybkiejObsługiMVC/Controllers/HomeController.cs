@@ -15,8 +15,6 @@ namespace BarSzybkiejObsługiMVC.Controllers
             var polecane   = db.Produkty.Where(p => !p.Ukryty && p.Polecany)
                 .OrderBy(p => Guid.NewGuid()).Take(3).ToList();
 
-            //Smsing.Sender();
-
             return View(polecane);
         }
     }

@@ -1,0 +1,27 @@
+﻿@model List<BarSzybkiejObsługiMVC.Models.Produkt>
+
+@{
+    ViewBag.Title = "Wszystko";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Wszystkie produkty</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Nazwa produktu</th>
+        <th>Kategoria</th>
+        <th>Polecany</th>
+        <th>Ukryty</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.NazwaProduktu</td>
+            <td>@item.Kategoria.NazwaKategorii</td>
+            <td>@item.Polecany</td>
+            <td>@item.Ukryty</td>
+            <td>@Html.ActionLink("Edytuj", "Edytuj", "Produkty", new { id=item.ProduktId}, new { @class="btn btn-info"})</td>
+        </tr>
+    }
+</table>
