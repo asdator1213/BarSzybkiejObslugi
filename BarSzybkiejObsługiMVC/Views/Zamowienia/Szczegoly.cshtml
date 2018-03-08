@@ -1,66 +1,95 @@
-﻿@model BarSzybkiejObsługiMVC.Models.Zamowienie
+﻿@using BarSzybkiejObsługiMVC.Models
+@model Zamowienie
 
 @{
     ViewBag.Title = "Szczegoly";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@using (Html.BeginForm("Zapisz", "Zamowienia", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
 
-<div class="row">
-    <h2 class="col-md-6">Zamówienie # @Model.ZamowienieId</h2>
-    <h2 class="col-md-6">Wartość zamówienia: @Model.Platnosc.Kwota zł</h2>
-</div>
+    <div class="row">
+        @Html.HiddenFor(model => model.ZamowienieId)
+        <h2 class="col-md-6">Zamówienie # @Model.ZamowienieId</h2>
+        <h2 class="col-md-6">Wartość zamówienia: @Model.Platnosc.Kwota zł</h2>
+    </div>
 
-<div class="row">
-    <h3 class="col-md-6">Kod: @Model.KodZamowienia</h3>
-    <div class="col-md-6">
-        <div class="row">
-            <h4 class="col-md-6">Stan zamówienia: @Model.StanZamowienia</h4>
-            <div class="col-md-6">
-                @Html.ActionLink("Zmień status", "Status", "Zamowienia", new { id = Model.ZamowienieId }, new { @class = "btn btn-info" })
+
+    <div class="row">
+        <h3 class="col-md-6">Kod: @Model.KodZamowienia</h3>
+        <div class="col-md-6">
+            <div class="row">
+                <h3 class="col-md-6">Stan zamówienia</h3>
+                @if (Model.Platnosc.CzyZaplacono != true)
+                {
+                    Html.DropDownListFor(m => m.StanZamowienia, new SelectList(Enum.GetValues(typeof(StanZamowienia))), new { @class = "form-control", style = "margin-top:15px" });
+                }
+                else
+                {
+                    @Html.TextBoxFor(model=>model.StanZamowienia, new { @class="form-control", disabled="disabled", style = "margin-top:15px" })
+                }
+
             </div>
         </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-md-6">
-        <h3>Zawartość zamówienia</h3>
-        <table class="table table-striped">
-            <tr>
-                <th>Produkt</th>
-                <th>Ilosc</th>
-                <th>Cena za sztukę</th>
-                <th></th>
-            </tr>
-            @foreach (var item in Model.PozycjeZamowienia)
-            {
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Zawartość zamówienia</h3>
+            <table class="table table-striped">
                 <tr>
-                    <td>@item.Produkt.NazwaProduktu</td>
-                    <td>@item.Ilosc</td>
-                    <td>@item.Produkt.Cena zł</td>
-                    <td>@Html.ActionLink("Usuń", "UsuńProdukt", "Zamowienia", new { zamowienieId = Model.ZamowienieId, produktId = item.ProduktId }, new { @class = "btn btn-danger" })</td>
+                    <th>Produkt</th>
+                    <th>Ilosc</th>
+                    <th>Cena za sztukę</th>
+                    <th></th>
                 </tr>
-            }
+                @foreach (var item in Model.PozycjeZamowienia)
+                {
+                    <tr>
+                        <td>@item.Produkt.NazwaProduktu</td>
+                        <td>@item.Ilosc</td>
+                        <td>@item.Produkt.Cena zł</td>
+                        <td>@Html.ActionLink("Usuń", "UsuńProdukt", "Zamowienia", new { zamowienieId = Model.ZamowienieId, produktId = item.ProduktId }, new { @class = "btn btn-danger" })</td>
+                    </tr>
+                }
 
-        </table>
-        <h4>Komentarz: @Html.TextAreaFor(model => model.Komentarz, new { @class = "form-control" })</h4>
-    </div>
-    <div class="col-md-6">
-        <div class="row">
-            <h3>Dane klienta</h3>
-            <div class="col-md-6">
-
-                <h4>Imię: @Html.TextBoxFor(model => model.Klient.Imie, new { @class = "form-control" })</h4>
-                <h4>Numer kontaktowy: @Html.TextBoxFor(model => model.Klient.Telefon, new { @class = "form-control" })</h4>
-            </div>
-            <div class="col-md-6">
-                <h4>Nazwisko: @Html.TextBoxFor(model => model.Klient.Nazwisko, new { @class = "form-control" })</h4>
-                <h4>Adres e-mail: @Html.TextBoxFor(model => model.Klient.Email, new { @class = "form-control" })</h4>
-            </div>
+            </table>
+            <h4>Komentarz: @Html.TextAreaFor(model => model.Komentarz, new { @class = "form-control" })</h4>
         </div>
-        <center><h3>Planowany termin odbioru: @Html.TextBoxFor(model => model.NaKiedy, new { @class = "form-control" })</h3></center>
+        <div class="col-md-6" style="margin-top:20px">
+            <div class="row">
+                <div class="row">
+                    <h4 class="col-md-6">Dane klienta</h4>
+                    <div class="col-md-6">
+                        @Html.ActionLink("Zmień dane klienta", "EdytujKlienta", "Zamowienia", new { id = Model.Klient.Id }, new { @class = "btn btn-info" })
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+
+                    <h4>Imię: @Html.TextBoxFor(model => model.Klient.Imie, new { @class = "form-control", disabled = "disabled" })</h4>
+                    <h4>Numer kontaktowy: @Html.TextBoxFor(model => model.Klient.Telefon, new { @class = "form-control", disabled = "disabled" })</h4>
+                </div>
+                <div class="col-md-6">
+                    <h4>Nazwisko: @Html.TextBoxFor(model => model.Klient.Nazwisko, new { @class = "form-control", disabled = "disabled" })</h4>
+                    <h4>
+                        Adres e-mail: @Html.TextBoxFor(model => model.Klient.Email, new { @class = "form-control", disabled = "disabled" })
+                    </h4>
+                </div>
+            </div>
+            <center>
+                <h3>Planowany termin odbioru:<br /> <span id="termin">@Model.NaKiedy</span></h3>
+                <input type="button" id="zmiana-terminu-odbioru" value="Zmień termin odbioru" class="btn btn-info" />
+                @Html.TextBoxFor(model => model.NaKiedy, new { id = "datetimepicker", @class = "hidden form-control" })
+                <input type="button" id="anuluj" class="btn btn-warning hidden" value="Anuluj" />
+            </center>
+        </div>
+
+        <center><input type="submit" value="Zapisz" class="btn btn-info" /></center>
+        <center> @Html.ActionLink("Powrót", "Index", "Zamowienia", null, new { @class = "btn btn-warning" })</center>
     </div>
 
-    <center>@Html.ActionLink("Zapisz", "Termin", "Zamowienia", new { id = Model.ZamowienieId }, new { @class = "btn btn-info" })</center>
-    <center>@Html.ActionLink("Powrót", "Index", "Zamowienia", null, new { @class = "btn btn-warning" })</center>
-</div>
+}
+<script src="~/Scripts/jquery.datetimepicker.full.min.js"></script>
+<script src="~/Scripts/kalendarz.js"></script>

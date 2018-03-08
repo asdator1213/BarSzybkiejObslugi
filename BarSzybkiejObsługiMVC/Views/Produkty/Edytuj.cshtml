@@ -6,7 +6,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h3>Edytuj produkt: @Model.NazwaProduktu</h3>
+<h3 style="margin:35px 0">Edytuj produkt: @Model.NazwaProduktu</h3>
 @using (Html.BeginForm())
 {
 
@@ -28,8 +28,13 @@
             @Html.TextAreaFor(model => model.Opisy.Opis, new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.Opisy.Opis)
         </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Opisy.OpisKrotki)
+            @Html.TextAreaFor(model => model.Opisy.OpisKrotki, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Opisy.OpisKrotki)
+        </div>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top:20px">
         <div class="col-md-4">
             @Html.LabelFor(model => model.Cena)
             @Html.TextBoxFor(model => model.Cena, new { @class = "form-control" })
@@ -42,11 +47,21 @@
         </div>
     </div>
     <div class="row" style="margin-top:20px;">
-        <div class="col-md-2" style="padding-right:0px">
+        <div class="col-md-2" style="text-align:center">
             <input type="submit" value="Zapisz produkt" class="btn btn-info" />
         </div>
-        <div class="col-md-1" style="padding-left:0px;">
+        <div class="col-md-2" style="text-align:center">
             @Html.ActionLink("Powrót", "Szczegoly", "Produkty", new { id = Model.ProduktId }, new { @class = "btn btn-warning" })
+        </div>
+        <div class="col-md-2" style="text-align:center">
+            @if (!Model.Ukryty)
+            {
+                @Html.ActionLink("Ukryj produkt", "Ukryj", "Produkty", new { id = Model.ProduktId, url="Edytuj" }, new { @class = "btn btn-danger koszykDodaj"})
+            }
+            else
+            {
+                @Html.ActionLink("Pokaż produkt", "Pokaz", "Produkty", new { id = Model.ProduktId, url="Edytuj" }, new { @class = "btn btn-success koszykDodaj"})
+            }
         </div>
     </div>
 }

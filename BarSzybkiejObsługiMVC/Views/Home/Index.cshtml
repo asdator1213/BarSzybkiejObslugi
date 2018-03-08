@@ -8,20 +8,23 @@
     <center><h3>Złóż zamówienie i odbierz je w ustalonym terminie!</h3></center>
     <center><h3>100% satysfakcji!</h3></center>
 </div>
-<br/>
+<br />
 <h2>Polecane produkty</h2>
 
-<div class="polecane_bar">
-    @foreach(var item in Model)
-    {
-        <a href="@Url.Action("Szczegoly", "Produkty", new { id = item.ProduktId})">
-            <div class="polecane mainPagePolecane">
-                <img src="~/Content/Images/@item.NazwaPlikuObrazka" />
-                <br /><br />
-                <div class="centered">@item.NazwaProduktu</div>
-            </div>
-        </a>
-    }
-    
-    <div style="clear:both"></div>
+<div class="row">
+    <div class="polecane_bar">
+        
+        @foreach (var item in Model)
+        {
+            <a href="@Url.Action("Szczegoly", "Produkty", new { id = item.ProduktId})">
+                <div class="polecane mainPagePolecane">
+                    <img src="~/Content/Images/@item.NazwaPlikuObrazka" />
+                    <br /><br />
+                    <div class="centered">@item.NazwaProduktu</div>
+                </div>
+            </a>
+        }
+
+    </div>
 </div>
+

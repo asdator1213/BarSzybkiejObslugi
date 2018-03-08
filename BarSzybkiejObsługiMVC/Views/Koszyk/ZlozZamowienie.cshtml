@@ -38,8 +38,6 @@
             <div class="form-group">
                 <h5><b>Wybierz typ płatności:</b></h5>
                 <div>@Html.RadioButtonFor(model => model.TypPlatnosci, 0, new { @checked = "checked" }) Gotówka</div>
-                <div>@Html.RadioButtonFor(model => model.TypPlatnosci, 1) Przelew</div>
-                <div>@Html.RadioButtonFor(model => model.TypPlatnosci, 2) Karta płatnicza</div>
             </div>
             <div style="margin-top: 20px; margin-left: 40px;">
                 <input type="submit" value="Złóż zamówienie" class="btn btn-info" />
@@ -88,44 +86,4 @@
 
 }
 <script src="~/Scripts/jquery.datetimepicker.full.min.js"></script>
-<script>
-    $(function () {
-
-        var terminDocelowy = '';
-
-        $("#anuluj").click(function () {
-            $("#termin").text(terminDocelowy);
-            $("#przyblizony-czas").removeClass("hidden");
-            $("#datetimepicker").addClass("hidden");
-            $(this).addClass("hidden");
-            $("#zmiana-terminu-odbioru").removeClass("hidden");
-        });
-
-        $("#zmiana-terminu-odbioru").click(function () {
-
-            $(this).addClass("hidden");
-            terminDocelowy = '@Model.NaKiedy';
-
-            $("#datetimepicker").css({
-                "display": "block",
-                'margin': '20px auto'
-            }).removeClass("hidden");
-
-            $("#anuluj").removeClass("hidden");
-            $("#przyblizony-czas").addClass("hidden");
-
-            $("#datetimepicker").datetimepicker({
-                startDate: '@Model.NaKiedy',
-                minDate: '@DateTime.Now',
-                minTime: 0
-        });
-
-            $("#datetimepicker").change(function () {
-                var termin = $("#datetimepicker").val();
-                console.log(termin);
-                $("#termin").text(termin);
-            });
-
-        });
-    });
-</script>
+<script src="~/Scripts/kalendarz.js"></script>

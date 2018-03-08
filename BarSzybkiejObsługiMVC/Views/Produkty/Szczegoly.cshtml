@@ -54,11 +54,11 @@
                                 @Html.ActionLink("Edytuj produkt", "Edytuj", "Produkty", new { id = Model.ProduktId }, new { @class = "btn btn-info koszykDodaj" })
                                 if (!Model.Ukryty)
                                 {
-                                    @Html.ActionLink("Ukryj produkt", "Ukryj", "Produkty", new { id = Model.ProduktId }, new { @class = "btn btn-danger koszykDodaj", style = "margin-top:20px;" })
+                                    @Html.ActionLink("Ukryj produkt", "Ukryj", "Produkty", new { id = Model.ProduktId, url="Szczegoly" }, new { @class = "btn btn-danger koszykDodaj", style = "margin-top:20px;" })
                                 }
                                 else
                                 {
-                                    @Html.ActionLink("Pokaż produkt", "Pokaz", "Produkty", new { id = Model.ProduktId }, new { @class = "btn btn-success koszykDodaj", style = "margin-top:20px;" })
+                                    @Html.ActionLink("Pokaż produkt", "Pokaz", "Produkty", new { id = Model.ProduktId, url = "Szczegoly" }, new { @class = "btn btn-success koszykDodaj", style = "margin-top:20px;" })
                                 }
 
                             }

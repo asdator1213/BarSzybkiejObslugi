@@ -12,7 +12,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
 
         public ActionResult Index()
         {
-            var polecane   = db.Produkty.Where(p => !p.Ukryty && p.Polecany)
+            var polecane = db.Produkty.Where(p => !p.Ukryty && p.Polecany)
                 .OrderBy(p => Guid.NewGuid()).Take(3).ToList();
 
             return View(polecane);

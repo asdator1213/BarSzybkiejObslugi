@@ -34,6 +34,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 produkt.CzasPrzygotowania = prod.CzasPrzygotowania;
                 produkt.Cena = prod.Cena;
                 produkt.Opisy.Opis = prod.Opisy.Opis;
+                produkt.Opisy.OpisKrotki = prod.Opisy.OpisKrotki;
 
                 db.SaveChanges();
             }
@@ -41,23 +42,24 @@ namespace BarSzybkiejObsługiMVC.Controllers
         }
 
         [Authorize(Roles = "Pracownik")]
-        public ActionResult Ukryj(int id)
+        public ActionResult Ukryj(int id, string url)
         {
             var produkt = db.Produkty.Find(id);
             produkt.Ukryty = true;
             db.SaveChanges();
-            return RedirectToAction("Szczegoly", new { id = produkt.ProduktId });
+            return RedirectToAction(url, new { id = produkt.ProduktId });
         }
 
         [Authorize(Roles = "Pracownik")]
-        public ActionResult Pokaz(int id)
+        public ActionResult Pokaz(int id, string url)
         {
             var produkt = db.Produkty.Find(id);
             produkt.Ukryty = false;
             db.SaveChanges();
-            return RedirectToAction("Szczegoly", new { id = produkt.ProduktId });
+            return RedirectToAction(url, new { id = produkt.ProduktId });
         }
 
+        [Authorize(Roles ="Pracownik")]
         public ActionResult Wszystko()
         {
             return View(db.Produkty.ToList());
