@@ -13,7 +13,7 @@
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
-    
+
     <script>
         $(function () {
             // Check the initial Poistion of the Sticky Header
@@ -54,14 +54,14 @@
             </li>
             <li class="koszyk">
                 @{
-                    if (!Request.IsAuthenticated)
-                    {
-                        <a href="@Url.Action("Index", "Koszyk")">Koszyk (<span id="koszyk-ilosc-pozycji">@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</span>)</a>
-                    }
-                    else
+                    if (Request.IsAuthenticated)
                     {
                         @Html.Partial("_LoginPartial")
+
                     }
+                    <div style="float:left">
+                        <a href="@Url.Action("Index", "Koszyk")">Koszyk (<span id="koszyk-ilosc-pozycji">@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</span>)</a>
+                    </div>
                 }
             </li>
         </ul>

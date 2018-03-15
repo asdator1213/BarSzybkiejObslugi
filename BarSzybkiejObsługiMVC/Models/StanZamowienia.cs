@@ -3,8 +3,9 @@
     public enum StanZamowienia
     {
         Przyjete,
+        Oczekujące,
         Zrealizowane,
-        Opoznione,
+        Opóznione,
         Niezrealizowane
     }
 }

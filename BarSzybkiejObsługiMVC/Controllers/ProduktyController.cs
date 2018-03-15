@@ -1,5 +1,6 @@
 ﻿using BarSzybkiejObsługiMVC.DAL;
 using BarSzybkiejObsługiMVC.Models;
+using System;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -18,6 +19,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
         [Authorize(Roles ="Pracownik")]
         public ActionResult Edytuj(int id)
         {
+            KategorieDropDown();
             var produkt = db.Produkty.Find(id);
             return View(produkt);
         }
@@ -35,6 +37,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 produkt.Cena = prod.Cena;
                 produkt.Opisy.Opis = prod.Opisy.Opis;
                 produkt.Opisy.OpisKrotki = prod.Opisy.OpisKrotki;
+                produkt.KategoriaId = prod.KategoriaId;
 
                 db.SaveChanges();
             }
@@ -59,10 +62,47 @@ namespace BarSzybkiejObsługiMVC.Controllers
             return RedirectToAction(url, new { id = produkt.ProduktId });
         }
 
+        private void KategorieDropDown()
+        {
+            var kategorie = db.Kategorie.ToList().Select(x => new SelectListItem
+            {
+                Text = x.NazwaKategorii,
+                Value = x.KategoriaId.ToString()
+            });
+
+            ViewBag.Kategorie = kategorie;
+        }
+
         [Authorize(Roles ="Pracownik")]
         public ActionResult Wszystko()
         {
             return View(db.Produkty.ToList());
+        }
+
+        [Authorize(Roles = "Pracownik")]
+        public ActionResult Dodaj()
+        {
+            KategorieDropDown();
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Dodaj(Produkt prod)
+        {
+            if(ModelState.IsValid)
+            {
+                try
+                {
+                    db.Produkty.Add(prod);
+                    db.SaveChanges();
+                }
+                catch(Exception)
+                {
+                    return View(prod);
+                }
+                return RedirectToAction("Wszystko");
+            }
+            return View(prod);
         }
     }
 }

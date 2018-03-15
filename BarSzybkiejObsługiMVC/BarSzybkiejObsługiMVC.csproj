@@ -341,6 +341,7 @@
     <Compile Include="Infrastructure\Const.cs" />
     <Compile Include="Infrastructure\ISessionManager.cs" />
     <Compile Include="Infrastructure\KoszykManager.cs" />
+    <Compile Include="Infrastructure\PowiadomienieSms.cs" />
     <Compile Include="Infrastructure\SessionManager.cs" />
     <Compile Include="Migrations\201803031923310_nowa.cs" />
     <Compile Include="Migrations\201803031923310_nowa.Designer.cs">
@@ -367,6 +368,7 @@
     <Compile Include="ViewModels\KoszykUsuwanieVM.cs" />
     <Compile Include="ViewModels\KoszykViewModel.cs" />
     <Compile Include="ViewModels\MailViewModel.cs" />
+    <Compile Include="ViewModels\PozycjeZamowienViewModel.cs" />
     <Compile Include="ViewModels\ZamowienieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -385,8 +387,7 @@
     <Content Include="Views\Koszyk\PotwierdzenieZamowienia.cshtml" />
     <Content Include="Views\Emails\_ViewStart.cshtml" />
     <Content Include="Views\Emails\Web.config" />
-    <Content Include="Views\Emails\Example.cshtml" />
-    <Content Include="Views\Emails\MailViewModel.cshtml" />
+    <Content Include="Views\Emails\ZamowieniePrzyjete.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Zamowienia\Index.cshtml" />
@@ -394,6 +395,8 @@
     <Content Include="Views\Produkty\Edytuj.cshtml" />
     <Content Include="Views\Produkty\Wszystko.cshtml" />
     <Content Include="Views\Zamowienia\EdytujKlienta.cshtml" />
+    <Content Include="Views\Produkty\Dodaj.cshtml" />
+    <Content Include="Views\Zamowienia\NoweZamowienie.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

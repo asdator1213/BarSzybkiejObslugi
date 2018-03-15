@@ -45,6 +45,10 @@
             @Html.TextBoxFor(model => model.CzasPrzygotowania, new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.CzasPrzygotowania)
         </div>
+        <div class="col-md-4">
+            <label>Kategoria</label>
+            @Html.DropDownListFor(model => model.KategoriaId, (IEnumerable<SelectListItem>)ViewBag.Kategorie, new { @class = "form-control" })
+        </div>
     </div>
     <div class="row" style="margin-top:20px;">
         <div class="col-md-2" style="text-align:center">

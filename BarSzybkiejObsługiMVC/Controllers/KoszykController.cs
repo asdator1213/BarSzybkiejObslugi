@@ -120,16 +120,11 @@ namespace BarSzybkiejObsługiMVC.Controllers
             zamowienieVM.CzasOczekiwania = zamowienieVM.PozycjeKoszyka
                 .Max(x => x.Produkt.CzasPrzygotowania);
 
-            var message = $"Zamówienie zostało przyjęte. Kwota do zapłaty: " +
-                $"{zamowienie.Platnosc.Kwota}zł, Termin odbioru: {zamowienie.NaKiedy}," +
-                $" Kod zamówienia: {zamowienie.KodZamowienia}";
+            var powiadomienie = new PowiadomienieSms(db);
 
-            //Smsing.Sender(message, zamowienie.Klient.Telefon);
-            
+            powiadomienie.Przyjete(zamowienie);
             return View(zamowienieVM);
         }
-
-        
 
     }
 }

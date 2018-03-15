@@ -306,3 +306,28 @@ footer {
     -webkit-transition: all 0.218s;
     transition: all 0.218s;
 }
+
+.oczekuje{
+    font-weight:bold;
+    color:seagreen;
+
+}
+
+.zrealizowane{
+    color:darkgreen;
+}
+
+.przyjete{
+    color:goldenrod;
+    font-weight:bold;
+}
+
+.opoznione{
+    color:coral;
+    font-weight:bold;
+}
+
+.niezrealizowane{
+    color:red;
+    font-weight:bold;
+}

@@ -1,0 +1,56 @@
+﻿@model BarSzybkiejObsługiMVC.Models.Produkt
+
+@{
+    ViewBag.Title = "Dodaj";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dodawanie nowego produktu</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.NazwaProduktu)
+            @Html.TextBoxFor(model => model.NazwaProduktu, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.NazwaProduktu)
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Opisy.Opis)
+            @Html.TextAreaFor(model => model.Opisy.Opis, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Opisy.Opis)
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Opisy.OpisKrotki)
+            @Html.TextAreaFor(model => model.Opisy.OpisKrotki, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Opisy.OpisKrotki)
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px">
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Cena)
+            @Html.TextBoxFor(model => model.Cena, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Cena)
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.CzasPrzygotowania)
+            @Html.TextBoxFor(model => model.CzasPrzygotowania, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.CzasPrzygotowania)
+        </div>
+        <div class="col-md-4">
+            <label>Kategoria</label>
+            @Html.DropDownListFor(model => model.KategoriaId, (IEnumerable<SelectListItem>)ViewBag.Kategorie, new { @class = "form-control"})
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-2" style="text-align:center">
+            <input type="submit" value="Zapisz produkt" class="btn btn-info" />
+        </div>
+        <div class="col-md-2" style="text-align:center">
+            @Html.ActionLink("Powrót", "Wszystko", "Produkty", null, new { @class = "btn btn-warning" })
+        </div>
+    </div>
+}
+

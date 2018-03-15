@@ -1,4 +1,5 @@
 ﻿using BarSzybkiejObsługiMVC.DAL;
+using BarSzybkiejObsługiMVC.Infrastructure;
 using BarSzybkiejObsługiMVC.Models;
 using System;
 using System.Data.Entity;
@@ -13,9 +14,16 @@ namespace BarSzybkiejObsługiMVC.Controllers
 
         //Authorize
         [Authorize(Roles = "Pracownik")]
-        public ActionResult Index()
+        public ActionResult Index(string orderCode)
         {
             var zamowienia = db.Zamowienia.ToList();
+
+            if (!String.IsNullOrEmpty(orderCode))
+            {
+                zamowienia = zamowienia.Where(z=>z.KodZamowienia.Contains(orderCode)).ToList();
+            }
+
+            
             return View(zamowienia);
         }
 
@@ -59,16 +67,16 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 zamowienie.NaKiedy = zam.NaKiedy;
                 zamowienie.Komentarz = zam.Komentarz;
                 zamowienie.StanZamowienia = zam.StanZamowienia;
-                if(zamowienie.StanZamowienia == StanZamowienia.Zrealizowane)
-                {
-                    zamowienie.Platnosc = db.Platnosci.SingleOrDefault(p => p.Id == zamowienie.PlatnoscId);
-                    zamowienie.Platnosc.DataPlatnosci = DateTime.Now;
-                    zamowienie.Platnosc.CzyZaplacono = true;
-                }
+
+                var powiadomienie = new PowiadomienieSms(db);
+                powiadomienie.SprawdzStanZamowienia(ref zamowienie);
                 
                 db.SaveChanges();
+
+                
             }
             return RedirectToAction("Szczegoly", new { id = zam.ZamowienieId });
         }
+
     }
 }

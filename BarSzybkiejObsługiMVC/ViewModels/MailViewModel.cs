@@ -1,8 +1,9 @@
-﻿using Postal;
+﻿//POSTAL MAILING
+using Postal;
 
 namespace BarSzybkiejObsługiMVC.ViewModels
 {
-    public class MailViewModel:Email
+    public class ZamowieniePrzyjete:Email
     {
         public ZamowienieViewModel Zamowienie { get; set; }
     }

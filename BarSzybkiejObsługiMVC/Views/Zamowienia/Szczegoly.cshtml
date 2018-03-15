@@ -21,15 +21,7 @@
         <div class="col-md-6">
             <div class="row">
                 <h3 class="col-md-6">Stan zamówienia</h3>
-                @if (Model.Platnosc.CzyZaplacono != true)
-                {
-                    Html.DropDownListFor(m => m.StanZamowienia, new SelectList(Enum.GetValues(typeof(StanZamowienia))), new { @class = "form-control", style = "margin-top:15px" });
-                }
-                else
-                {
-                    @Html.TextBoxFor(model=>model.StanZamowienia, new { @class="form-control", disabled="disabled", style = "margin-top:15px" })
-                }
-
+                @Html.DropDownListFor(m => m.StanZamowienia, new SelectList(Enum.GetValues(typeof(StanZamowienia))), new { @class = "form-control", style = "margin-top:15px" })
             </div>
         </div>
     </div>
@@ -50,7 +42,6 @@
                         <td>@item.Produkt.NazwaProduktu</td>
                         <td>@item.Ilosc</td>
                         <td>@item.Produkt.Cena zł</td>
-                        <td>@Html.ActionLink("Usuń", "UsuńProdukt", "Zamowienia", new { zamowienieId = Model.ZamowienieId, produktId = item.ProduktId }, new { @class = "btn btn-danger" })</td>
                     </tr>
                 }
 
