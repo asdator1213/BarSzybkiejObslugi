@@ -329,6 +329,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategorieController.cs" />
+    <Compile Include="Controllers\KontoController.cs" />
     <Compile Include="Controllers\KoszykController.cs" />
     <Compile Include="Controllers\ProduktyController.cs" />
     <Compile Include="Controllers\ZamowieniaController.cs" />
@@ -365,10 +366,10 @@
     <Compile Include="Utility\Smsing.cs" />
     <Compile Include="Utility\ZamowienieUtil.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\KontoVM.cs" />
     <Compile Include="ViewModels\KoszykUsuwanieVM.cs" />
     <Compile Include="ViewModels\KoszykViewModel.cs" />
     <Compile Include="ViewModels\MailViewModel.cs" />
-    <Compile Include="ViewModels\PozycjeZamowienViewModel.cs" />
     <Compile Include="ViewModels\ZamowienieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -397,6 +398,7 @@
     <Content Include="Views\Zamowienia\EdytujKlienta.cshtml" />
     <Content Include="Views\Produkty\Dodaj.cshtml" />
     <Content Include="Views\Zamowienia\NoweZamowienie.cshtml" />
+    <Content Include="Views\Konto\Konta.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -91,6 +91,10 @@ namespace BarSzybkiejObsługiMVC.Controllers
             {
                 case SignInStatus.Success:
                     {
+                        if(User.IsInRole("Admin"))
+                        {
+                            return RedirectToAction("Konta", "Konto");
+                        }
                         if (url != null)
                             return RedirectToLocal(url.ToString());
                         else

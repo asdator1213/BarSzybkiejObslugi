@@ -2,6 +2,6 @@
 {
     public class Const
     {
-        public const string KoszykSessionKlucz = "KoszykSessionKlucz";
+        public const string KoszykKey = "KeyKoszyk";
     }
 }

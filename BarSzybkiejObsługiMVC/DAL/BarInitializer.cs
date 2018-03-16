@@ -91,7 +91,6 @@ namespace BarSzybkiejObsługiMVC.DAL
                 if (createUserResult.Succeeded)
                 {
                     var addToRoleResult = userManager.AddToRole(user.Id, "Admin");
-
                 }
             }
         }

@@ -22,16 +22,32 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
         public List<PozycjaKoszyka> PobierzKoszyk()
         {
             List<PozycjaKoszyka> koszyk;
-            if(session.Get<List<PozycjaKoszyka>>(Const.KoszykSessionKlucz) == null)
+            if(session.Get<List<PozycjaKoszyka>>(Const.KoszykKey) == null)
             {
                 koszyk = new List<PozycjaKoszyka>();
             }
             else
             {
-                koszyk = session.Get<List<PozycjaKoszyka>>(Const.KoszykSessionKlucz) as List<PozycjaKoszyka>;
+                koszyk = session.Get<List<PozycjaKoszyka>>(Const.KoszykKey) as List<PozycjaKoszyka>;
             }
 
             return koszyk;
+        }
+
+        private void DodajNowyProduktDoKoszyka(ref List<PozycjaKoszyka> koszyk, int produktId)
+        {
+            var produktDoDodania = db.Produkty.SingleOrDefault(p => p.ProduktId == produktId);
+
+            if (produktDoDodania != null)
+            {
+                var nowaPozycjaKoszyka = new PozycjaKoszyka
+                {
+                    Produkt = produktDoDodania,
+                    Ilosc = 1,
+                    Wartosc = produktDoDodania.Cena
+                };
+                koszyk.Add(nowaPozycjaKoszyka);
+            }
         }
 
         public void DodajDoKoszyka(int produktId)
@@ -45,22 +61,9 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
             }
             else
             {
-                
-                var produktDoDodania = db.Produkty.SingleOrDefault(p => p.ProduktId == produktId);
-
-                if(produktDoDodania!=null)
-                {
-                    var nowaPozycjaKoszyka = new PozycjaKoszyka
-                    {
-                        Produkt = produktDoDodania,
-                        Ilosc = 1,
-                        Wartosc = produktDoDodania.Cena
-                    };
-                    koszyk.Add(nowaPozycjaKoszyka);
-                }
-
+                DodajNowyProduktDoKoszyka(ref koszyk, produktId);
             }
-            session.Set(Const.KoszykSessionKlucz, koszyk);
+            session.Set(Const.KoszykKey, koszyk);
         }
 
         public int UsunZKoszyka(int produktId)
@@ -116,24 +119,27 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
 
             zamowienieDoDodania.PlatnoscId = zamowienieDoDodania.Platnosc.Id;
             db.SaveChanges();
+
             zamowienie.UzupelnijZamowienieViewModel(zamowienieDoDodania);
             zamowienie.PozycjeKoszyka = koszyk;
 
-
-            //POSTAL MAILING
-            var mail = new ZamowieniePrzyjete
-            {
-                Zamowienie = zamowienie
-            };
-            mail.Send();
-            ////////////////
+            MailPrzyjeteZamowienie(zamowienie);
 
             return zamowienie;
         }
 
         public void PustyKoszyk()
         {
-            session.Set<List<PozycjaKoszyka>>(Const.KoszykSessionKlucz, null);
+            session.Set<List<PozycjaKoszyka>>(Const.KoszykKey, null);
+        }
+
+        public void MailPrzyjeteZamowienie(ZamowienieViewModel zamowienie)
+        {
+            var mail = new ZamowieniePrzyjete
+            {
+                Zamowienie = zamowienie
+            };
+            mail.Send();
         }
 
     }

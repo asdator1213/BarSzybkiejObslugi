@@ -17,13 +17,10 @@ namespace BarSzybkiejObsługiMVC.Controllers
         public ActionResult Index(string orderCode)
         {
             var zamowienia = db.Zamowienia.ToList();
-
             if (!String.IsNullOrEmpty(orderCode))
             {
                 zamowienia = zamowienia.Where(z=>z.KodZamowienia.Contains(orderCode)).ToList();
             }
-
-            
             return View(zamowienia);
         }
 
@@ -72,8 +69,6 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 powiadomienie.SprawdzStanZamowienia(ref zamowienie);
                 
                 db.SaveChanges();
-
-                
             }
             return RedirectToAction("Szczegoly", new { id = zam.ZamowienieId });
         }
