@@ -1,4 +1,5 @@
-﻿@model List<BarSzybkiejObsługiMVC.Models.Zamowienie>
+﻿@using Microsoft.AspNet.Identity;
+@model List<BarSzybkiejObsługiMVC.Models.Zamowienie>
 @{
     ViewBag.Title = "View";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,7 +7,7 @@
 <link href="~/Content/style.css" rel="stylesheet" />
 <h2>Wszystkie zamówienia</h2>
 <div style="margin:20px 0">
-    <div style="float:left">@Html.ActionLink("Dodaj nowe zamówienie", "Dodaj", "Zamowienia", null, new { @class = "btn btn-info" })</div>
+    <div style="float:left">@Html.ActionLink("Dodaj nowe zamówienie", "Index", "Home", null, new { @class = "btn btn-info" })</div>
     @using (Html.BeginForm())
     {
         <div style="margin-left:50px;float:left">@Html.TextBox("OrderCode", null, new { @class = "form-control", placeholder = "Wpisz kod zamówienia" })</div>
@@ -29,7 +30,13 @@
 
         @foreach (var item in Model)
         {
-            <tr>
+            var custom_style = "";
+            if (item.PracownikId == User.Identity.GetUserId())
+            {
+                custom_style = "border: 2px solid green;";
+            }
+
+            <tr style="@custom_style">
                 <td>@item.ZamowienieId</td>
                 <td>@item.DataDodania</td>
                 <td>@item.KodZamowienia</td>
@@ -37,21 +44,29 @@
 
                 @{
                     var stanZamowienia = "";
-                    if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Przyjete)
+                    if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Nowe)
                     {
-                        stanZamowienia = "przyjete";
+                        stanZamowienia = "nowe";
                     }
-                    else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Oczekujące)
+                    else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Gotowe)
                     {
-                        stanZamowienia = "oczekuje";
+                        stanZamowienia = "gotowe";
                     }
                     else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Zrealizowane)
                     {
                         stanZamowienia = "zrealizowane";
                     }
-                    else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Opóznione)
+                    else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Opóźnione)
                     {
                         stanZamowienia = "opoznione";
+                    }
+                    else if(item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Przyjete)
+                    {
+                        stanZamowienia = "przyjete";
+                    }
+                    else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Nieodebrane)
+                    {
+                        stanZamowienia = "nieodebrane";
                     }
                     else
                     {

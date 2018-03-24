@@ -69,6 +69,19 @@ namespace BarSzybkiejObsługiMVC.Controllers
         // GET: Account
         public ActionResult Login(string returnUrl)
         {
+            if (Request.IsAuthenticated)
+            {
+                if (User.IsInRole("Admin"))
+                {
+                    return RedirectToAction("Konta", "Konto");
+                }
+
+                if (User.IsInRole("Pracownik"))
+                {
+                    return RedirectToAction("Index", "Zamowienia");
+                }
+            }
+
             Session["PreviousPage"] = returnUrl;
             ViewBag.ReturnUrl = returnUrl;
             return View();
@@ -91,9 +104,15 @@ namespace BarSzybkiejObsługiMVC.Controllers
             {
                 case SignInStatus.Success:
                     {
-                        if(User.IsInRole("Admin"))
+                        ApplicationUser user = await UserManager.FindAsync(model.Username, model.Password);
+
+                        if (UserManager.IsInRole(user.Id, "Admin"))
                         {
                             return RedirectToAction("Konta", "Konto");
+                        }
+                        if (UserManager.IsInRole(user.Id, "Pracownik"))
+                        {
+                            return RedirectToAction("Index", "Zamowienia");
                         }
                         if (url != null)
                             return RedirectToLocal(url.ToString());
@@ -106,18 +125,23 @@ namespace BarSzybkiejObsługiMVC.Controllers
             }
         }
 
+        [Authorize(Roles ="Admin")]
         public ActionResult Register()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { Name = model.Name, UserName = model.Username, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
+
+                UserManager.AddToRole(user.Id, "Pracownik");
+
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);

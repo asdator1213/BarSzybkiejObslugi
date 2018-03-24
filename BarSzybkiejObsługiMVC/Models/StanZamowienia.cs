@@ -2,10 +2,12 @@
 {
     public enum StanZamowienia
     {
+        Nowe,
         Przyjete,
-        Oczekujące,
+        Gotowe,
         Zrealizowane,
-        Opóznione,
-        Niezrealizowane
+        Nieodebrane,
+        Niezrealizowane,
+        Opóźnione
     }
 }

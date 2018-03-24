@@ -119,10 +119,6 @@ namespace BarSzybkiejObsługiMVC.Controllers
 
             zamowienieVM.CzasOczekiwania = zamowienieVM.PozycjeKoszyka
                 .Max(x => x.Produkt.CzasPrzygotowania);
-
-            var powiadomienie = new PowiadomienieSms(db);
-
-            powiadomienie.Przyjete(zamowienie);
             return View(zamowienieVM);
         }
 

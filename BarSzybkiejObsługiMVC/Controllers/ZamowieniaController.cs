@@ -1,6 +1,7 @@
 ﻿using BarSzybkiejObsługiMVC.DAL;
 using BarSzybkiejObsługiMVC.Infrastructure;
 using BarSzybkiejObsługiMVC.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Data.Entity;
 using System.Linq;
@@ -73,5 +74,28 @@ namespace BarSzybkiejObsługiMVC.Controllers
             return RedirectToAction("Szczegoly", new { id = zam.ZamowienieId });
         }
 
+        [Authorize(Roles ="Pracownik")]
+        public ActionResult Zaklep(int id)
+        {
+            var zamowienie = db.Zamowienia.Find(id);
+            var userid = User.Identity.GetUserId();
+            var username = db.Users.Find(userid).Name;
+            zamowienie.PracownikImieNazwisko = username;
+            zamowienie.PracownikId = userid;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Szczegoly", new { id = zamowienie.ZamowienieId });
+        }
+
+        public ActionResult Porzuc(int id)
+        {
+            var zamowienie = db.Zamowienia.Find(id);
+            zamowienie.PracownikId = null;
+            zamowienie.PracownikImieNazwisko = null;
+
+            db.SaveChanges();
+            return RedirectToAction("Szczegoly", new { id = zamowienie.ZamowienieId });
+        }
     }
 }

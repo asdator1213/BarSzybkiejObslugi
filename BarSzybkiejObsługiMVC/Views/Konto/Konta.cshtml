@@ -6,10 +6,11 @@
 
 <h2>Wszystkie konta użytkowników</h2>
 
-@Html.ActionLink("Dodaj nowe konto", "NoweKonto", "Konto", null, new { @class = "btn btn-info" })
+@Html.ActionLink("Dodaj nowe konto", "Register", "Account", null, new { @class = "btn btn-info" })
 <table class="table table-striped">
     <tr>
         <th>Użytkownik</th>
+        <th>Imię i nazwisko</th>
         <th>Adres e-mail</th>
         <th></th>
     </tr>
@@ -17,9 +18,9 @@
     {
         <tr>
             <td>@item.NazwaUzytkownika</td>
+            <td>@item.ImieNazwisko</td>
             <td>@item.Email</td>
             <td>
-                @Html.ActionLink("Szczegóły", "Szczegoly", "Konto", new { id = item.Id }, new { @class = "btn btn-warning" })
             @Html.ActionLink("Usuń", "Usun", "Konto", new { id = item.Id }, new { @class = "btn btn-danger" })
         </td>
     </tr>

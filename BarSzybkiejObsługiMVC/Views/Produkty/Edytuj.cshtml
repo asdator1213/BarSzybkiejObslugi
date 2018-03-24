@@ -60,11 +60,22 @@
         <div class="col-md-2" style="text-align:center">
             @if (!Model.Ukryty)
             {
-                @Html.ActionLink("Ukryj produkt", "Ukryj", "Produkty", new { id = Model.ProduktId, url="Edytuj" }, new { @class = "btn btn-danger koszykDodaj"})
+                @Html.ActionLink("Ukryj produkt", "Ukryj", "Produkty", new { id = Model.ProduktId, url = "Edytuj" }, new { @class = "btn btn-danger koszykDodaj" })
             }
             else
             {
-                @Html.ActionLink("Pokaż produkt", "Pokaz", "Produkty", new { id = Model.ProduktId, url="Edytuj" }, new { @class = "btn btn-success koszykDodaj"})
+                @Html.ActionLink("Pokaż produkt", "Pokaz", "Produkty", new { id = Model.ProduktId, url = "Edytuj" }, new { @class = "btn btn-success koszykDodaj" })
+            }
+        </div>
+        <div class="col-md-2">
+
+            @if (!Model.Polecany)
+            {
+                @Html.ActionLink("Polecaj produkt", "Polecany", "Produkty", new { id = Model.ProduktId, url = "Edytuj" }, new { @class = "btn btn-danger koszykDodaj" })
+            }
+            else
+            {
+                @Html.ActionLink("Niepolecaj produktu", "Niepolecany", "Produkty", new { id = Model.ProduktId, url = "Edytuj" }, new { @class = "btn btn-success koszykDodaj" })
             }
         </div>
     </div>

@@ -348,6 +348,22 @@
     <Compile Include="Migrations\201803031923310_nowa.Designer.cs">
       <DependentUpon>201803031923310_nowa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803161759145_Dodanie pracownikId do zamowienia.cs" />
+    <Compile Include="Migrations\201803161759145_Dodanie pracownikId do zamowienia.Designer.cs">
+      <DependentUpon>201803161759145_Dodanie pracownikId do zamowienia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803161848171_Dodanie PracownikImieNazwisko.cs" />
+    <Compile Include="Migrations\201803161848171_Dodanie PracownikImieNazwisko.Designer.cs">
+      <DependentUpon>201803161848171_Dodanie PracownikImieNazwisko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803161856291_Dodanie PracownikId.cs" />
+    <Compile Include="Migrations\201803161856291_Dodanie PracownikId.Designer.cs">
+      <DependentUpon>201803161856291_Dodanie PracownikId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803201003351_Identity update.cs" />
+    <Compile Include="Migrations\201803201003351_Identity update.Designer.cs">
+      <DependentUpon>201803201003351_Identity update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Kategoria.cs" />
     <Compile Include="Models\Klient.cs" />
@@ -362,6 +378,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utility\CodeGenerator.cs" />
+    <Compile Include="Utility\HtmlHelpers.cs" />
     <Compile Include="Utility\Mailing.cs" />
     <Compile Include="Utility\Smsing.cs" />
     <Compile Include="Utility\ZamowienieUtil.cs" />
@@ -412,6 +429,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803031923310_nowa.resx">
       <DependentUpon>201803031923310_nowa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803161759145_Dodanie pracownikId do zamowienia.resx">
+      <DependentUpon>201803161759145_Dodanie pracownikId do zamowienia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803161848171_Dodanie PracownikImieNazwisko.resx">
+      <DependentUpon>201803161848171_Dodanie PracownikImieNazwisko.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803161856291_Dodanie PracownikId.resx">
+      <DependentUpon>201803161856291_Dodanie PracownikId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803201003351_Identity update.resx">
+      <DependentUpon>201803201003351_Identity update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

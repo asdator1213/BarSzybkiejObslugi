@@ -307,17 +307,21 @@ footer {
     transition: all 0.218s;
 }
 
-.oczekuje{
+.gotowe{
     font-weight:bold;
     color:seagreen;
 
+}
+
+.przyjete {
+    color: goldenrod;
 }
 
 .zrealizowane{
     color:darkgreen;
 }
 
-.przyjete{
+.nowe{
     color:goldenrod;
     font-weight:bold;
 }
@@ -328,6 +332,9 @@ footer {
 }
 
 .niezrealizowane{
+    color:red;
+}
+.nieodebrane{
     color:red;
     font-weight:bold;
 }

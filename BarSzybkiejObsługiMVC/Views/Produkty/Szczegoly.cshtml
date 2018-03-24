@@ -18,7 +18,6 @@
 </div>
 
 
-
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -70,6 +69,16 @@
                                 else
                                 {
                                     @Html.ActionLink("Pokaż produkt", "Pokaz", "Produkty", new { id = Model.ProduktId, url = "Szczegoly" }, new { @class = "btn btn-success koszykDodaj" })
+                                }
+                            </div>
+                            <div class="col-md-4">
+                                @if (!Model.Polecany)
+                                {
+                                    @Html.ActionLink("Polecaj produkt", "Polecany", "Produkty", new { id = Model.ProduktId, url = "Szczegoly" }, new { @class = "btn btn-danger koszykDodaj" })
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("Niepolecaj produktu", "Niepolecany", "Produkty", new { id = Model.ProduktId, url = "Szczegoly" }, new { @class = "btn btn-success koszykDodaj" })
                                 }
                             </div>
                         </div>

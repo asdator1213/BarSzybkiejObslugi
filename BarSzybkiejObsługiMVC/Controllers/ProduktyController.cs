@@ -9,7 +9,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
     public class ProduktyController : Controller
     {
         private BarContext db = new BarContext();
-        // GET: Produkty
+
         public ActionResult Szczegoly(int id)
         {
             var produktSzczegoly = db.Produkty.Find(id);
@@ -26,6 +26,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Pracownik")]
         public ActionResult Edytuj(Produkt prod)
         {
             if(ModelState.IsValid)
@@ -87,6 +88,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Pracownik")]
         public ActionResult Dodaj(Produkt prod)
         {
             if(ModelState.IsValid)
@@ -103,6 +105,24 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 return RedirectToAction("Wszystko");
             }
             return View(prod);
+        }
+
+        [Authorize(Roles = "Pracownik")]
+        public ActionResult Polecany(int id, string url)
+        {
+            var produkt = db.Produkty.Find(id);
+            produkt.Polecany = true;
+            db.SaveChanges();
+            return RedirectToAction(url, new { id = produkt.ProduktId });
+        }
+
+        [Authorize(Roles = "Pracownik")]
+        public ActionResult Niepolecany(int id, string url)
+        {
+            var produkt = db.Produkty.Find(id);
+            produkt.Polecany = false;
+            db.SaveChanges();
+            return RedirectToAction(url, new { id = produkt.ProduktId });
         }
     }
 }

@@ -49,16 +49,29 @@ namespace BarSzybkiejObsługiMVC.Infrastructure
         {
             switch(zamowienie.StanZamowienia)
             {
-                case StanZamowienia.Oczekujące:
+                case StanZamowienia.Przyjete:
+                    Przyjete(zamowienie);
+                    break;
+                case StanZamowienia.Opóźnione:
+                    Opóźnione(zamowienie);
+                    break;
+                case StanZamowienia.Gotowe:
                     DoOdbioru(zamowienie);
                     break;
-                case StanZamowienia.Opóznione:
+                case StanZamowienia.Nieodebrane:
                     Oczekuje(zamowienie);
                     break;
                 case StanZamowienia.Zrealizowane:
                     Zrealizowane(zamowienie);
                     break;
             }
+        }
+
+        private void Opóźnione(Zamowienie zamowienie)
+        {
+            string message = $"Odbiór twojego zamówienia zostanie opóźniony z powodu dużej ilości zamówień! Przewidywany termin odbioru: {zamowienie.NaKiedy}, "+
+                $"Kod zamówienia: {zamowienie.KodZamowienia}, kwota: {zamowienie.Platnosc.Kwota} zł.";
+            Smsing.Sender(message, zamowienie.Klient.Telefon);
         }
     }
 }

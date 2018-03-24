@@ -46,17 +46,17 @@ namespace BarSzybkiejObsługiMVC.DAL
                 new Produkt { NazwaProduktu = "Kurczak z pesto", OpisyId = 2, Cena = 12.00M, CzasPrzygotowania = 45, Polecany = true, KategoriaId = 1, NazwaPlikuObrazka = "kurczak_pesto.jpeg" },
                 new Produkt { NazwaProduktu = "Ryba po grecku", OpisyId = 3, Cena = 13.50M, CzasPrzygotowania = 45, Polecany = true, KategoriaId = 1, NazwaPlikuObrazka = "ryba_po_grecku.jpeg" },
                 new Produkt { NazwaProduktu = "Tortilla z kurczakiem", OpisyId = 5, Cena = 10.0M, CzasPrzygotowania = 15, Polecany = true, KategoriaId = 2, NazwaPlikuObrazka = "tortilla.jpg" },
-                new Produkt { NazwaProduktu = "Frytki 400g", OpisyId = 6, Cena = 6.0M, CzasPrzygotowania = 15, Polecany = true, KategoriaId = 2, NazwaPlikuObrazka = "frytki.jpg" },
-                new Produkt { NazwaProduktu = "Hamburger z wołowiną", OpisyId = 7, Cena = 7.50M, CzasPrzygotowania = 20, Polecany = true, KategoriaId = 2, NazwaPlikuObrazka = "hamburger.jpg" },
-                new Produkt { NazwaProduktu = "Hot-dog", OpisyId = 8, Cena = 4.50M, CzasPrzygotowania = 15, Polecany = true, KategoriaId = 2, NazwaPlikuObrazka = "hotdog.jpg" },
-                new Produkt { NazwaProduktu = "Zapiekanka z kawałkami wołowiny i warzywami", OpisyId = 9, Cena = 5.0M, CzasPrzygotowania = 15, Polecany = true, KategoriaId = 2, NazwaPlikuObrazka = "zapiekanka.jpeg" },
-                new Produkt { NazwaProduktu = "Paszteciki z mięsem", OpisyId = 10, Cena = 8.50M, CzasPrzygotowania = 25, Polecany = true, KategoriaId = 3, NazwaPlikuObrazka = "pasztecik.jpeg" },
-                new Produkt { NazwaProduktu = "Opiekana kukurydza", OpisyId = 11, Cena = 7.0M, CzasPrzygotowania = 15, Polecany = true, KategoriaId = 3, NazwaPlikuObrazka = "kukurydza.jpg" },
-                new Produkt { NazwaProduktu = "Szpinak na ostro ", OpisyId = 12, Cena = 5.0M, CzasPrzygotowania = 15, Polecany = true, KategoriaId = 3, NazwaPlikuObrazka = "szpinak.jpg" },
-                new Produkt { NazwaProduktu = "Nadziewane serowe kulki w panierce", OpisyId = 13, Cena = 8.50M, CzasPrzygotowania = 20, Polecany = true, KategoriaId = 3, NazwaPlikuObrazka = "serowe_kulki.jpg" },
-                new Produkt { NazwaProduktu = "Woda gazowana 500ml", OpisyId = 14, Cena = 2.50M, CzasPrzygotowania = 0, Polecany = true, KategoriaId = 4, NazwaPlikuObrazka = "woda.jpg" },
-                new Produkt { NazwaProduktu = "Cola", OpisyId = 15, Cena = 3.00M, CzasPrzygotowania = 0, Polecany = true, KategoriaId = 4, NazwaPlikuObrazka = "cola.jpg" },
-                new Produkt { NazwaProduktu = "Gorąca herbata", OpisyId = 16, Cena = 2.00M, CzasPrzygotowania = 5, Polecany = true, KategoriaId = 4, NazwaPlikuObrazka = "herbata.jpg" }
+                new Produkt { NazwaProduktu = "Frytki 400g", OpisyId = 6, Cena = 6.0M, CzasPrzygotowania = 15, Polecany = false, KategoriaId = 2, NazwaPlikuObrazka = "frytki.jpg" },
+                new Produkt { NazwaProduktu = "Hamburger z wołowiną", OpisyId = 7, Cena = 7.50M, CzasPrzygotowania = 20, Polecany = false, KategoriaId = 2, NazwaPlikuObrazka = "hamburger.jpg" },
+                new Produkt { NazwaProduktu = "Hot-dog", OpisyId = 8, Cena = 4.50M, CzasPrzygotowania = 15, Polecany = false, KategoriaId = 2, NazwaPlikuObrazka = "hotdog.jpg" },
+                new Produkt { NazwaProduktu = "Zapiekanka z kawałkami wołowiny i warzywami", OpisyId = 9, Cena = 5.0M, CzasPrzygotowania = 15, Polecany = false, KategoriaId = 2, NazwaPlikuObrazka = "zapiekanka.jpeg" },
+                new Produkt { NazwaProduktu = "Paszteciki z mięsem", OpisyId = 10, Cena = 8.50M, CzasPrzygotowania = 25, Polecany = false, KategoriaId = 3, NazwaPlikuObrazka = "pasztecik.jpeg" },
+                new Produkt { NazwaProduktu = "Opiekana kukurydza", OpisyId = 11, Cena = 7.0M, CzasPrzygotowania = 15, Polecany = false, KategoriaId = 3, NazwaPlikuObrazka = "kukurydza.jpg" },
+                new Produkt { NazwaProduktu = "Szpinak na ostro ", OpisyId = 12, Cena = 5.0M, CzasPrzygotowania = 15, Polecany = false, KategoriaId = 3, NazwaPlikuObrazka = "szpinak.jpg" },
+                new Produkt { NazwaProduktu = "Nadziewane serowe kulki w panierce", OpisyId = 13, Cena = 8.50M, CzasPrzygotowania = 20, Polecany = false, KategoriaId = 3, NazwaPlikuObrazka = "serowe_kulki.jpg" },
+                new Produkt { NazwaProduktu = "Woda gazowana 500ml", OpisyId = 14, Cena = 2.50M, CzasPrzygotowania = 0, Polecany = false, KategoriaId = 4, NazwaPlikuObrazka = "woda.jpg" },
+                new Produkt { NazwaProduktu = "Cola", OpisyId = 15, Cena = 3.00M, CzasPrzygotowania = 0, Polecany = false, KategoriaId = 4, NazwaPlikuObrazka = "cola.jpg" },
+                new Produkt { NazwaProduktu = "Gorąca herbata", OpisyId = 16, Cena = 2.00M, CzasPrzygotowania = 5, Polecany = false, KategoriaId = 4, NazwaPlikuObrazka = "herbata.jpg" }
 
             );
 

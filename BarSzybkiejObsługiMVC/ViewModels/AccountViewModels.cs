@@ -19,6 +19,14 @@ namespace BarSzybkiejObsługiMVC.ViewModels
 
     public class RegisterViewModel
     {
+        [Required(ErrorMessage = "Musisz wprowadzić imię i nazwisko użytkownika")]
+        [Display(Name = "Imię i nazwisko")]
+        public string Name { get; set; }
+
+        [Display(Name ="Nazwa użytkownika")]
+        [Required(ErrorMessage ="Musisz wprowadzić nazwę użytkownika")]
+        public string Username { get; set; }
+
         [Required(ErrorMessage = "Musisz podać adres e-mail")]
         [EmailAddress]
         public string Email { get; set; }

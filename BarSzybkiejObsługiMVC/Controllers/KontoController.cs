@@ -51,6 +51,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         public ActionResult Konta()
         {
             var users = db.Users.ToList();
@@ -61,6 +62,7 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 {
                     NazwaUzytkownika = item.UserName,
                     Email = item.Email,
+                    ImieNazwisko = item.Name,
                     Id = item.Id
                 });
             }

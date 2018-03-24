@@ -15,8 +15,13 @@ namespace BarSzybkiejObsługiMVC.Models
         public int KlientId { get; set; }
         public virtual Klient Klient { get; set; }
 
+        public string PracownikImieNazwisko { get; set; }
+        public string PracownikId { get; set; }
+
         public int PlatnoscId { get; set; }
         public virtual Platnosc Platnosc { get; set; }
+
+
 
         public List<PozycjeZamowienia> PozycjeZamowienia { get; set; }
     }
