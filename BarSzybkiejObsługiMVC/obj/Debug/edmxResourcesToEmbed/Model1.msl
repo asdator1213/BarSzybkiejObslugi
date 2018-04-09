@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BarSzybkiejObsługiMVCModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="BarSzybkiejObsługiMVCModel.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategoria">
+      <EntityTypeMapping TypeName="BarSzybkiejObsługiMVCModel.Kategoria">
+        <MappingFragment StoreEntitySet="Kategoria">
+          <ScalarProperty Name="KategoriaId" ColumnName="KategoriaId" />
+          <ScalarProperty Name="NazwaKategorii" ColumnName="NazwaKategorii" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klient">
+      <EntityTypeMapping TypeName="BarSzybkiejObsługiMVCModel.Klient">
+        <MappingFragment StoreEntitySet="Klient">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opisy">
+      <EntityTypeMapping TypeName="BarSzybkiejObsługiMVCModel.Opisy">
+        <MappingFragment StoreEntitySet="Opisy">
+          <ScalarProperty Name="OpisyId" ColumnName="OpisyId" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="OpisKrotki" ColumnName="OpisKrotki" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Platnosc">
+      <EntityTypeMapping TypeName="BarSzybkiejObsługiMVCModel.Platnosc">
+        <MappingFragment StoreEntitySet="Platnosc">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataPlatnosci" ColumnName="DataPlatnosci" />
+          <ScalarProperty Name="TypPlatnosci" ColumnName="TypPlatnosci" />
+          <ScalarProperty Name="Kwota" ColumnName="Kwota" />
+          <ScalarProperty Name="CzyZaplacono" ColumnName="CzyZaplacono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PozycjeZamowienia">
+      <EntityTypeMapping TypeName="BarSzybkiejObsługiMVCModel.PozycjeZamowienia">
+        <MappingFragment StoreEntitySet="PozycjeZamowienia">
+          <ScalarProperty Name="PozycjeZamowieniaId" ColumnName="PozycjeZamowieniaId" />
+          <ScalarProperty Name="ZamowienieId" ColumnName="ZamowienieId" />
+          <ScalarProperty Name="ProduktId" ColumnName="ProduktId" />
+          <ScalarProperty Name="Ilosc" ColumnName="Ilosc" />
+          <ScalarProperty Name="CenaZakupu" ColumnName="CenaZakupu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produkt">
+      <EntityTypeMapping TypeName="BarSzybkiejObsługiMVCModel.Produkt">
+        <MappingFragment StoreEntitySet="Produkt">
+          <ScalarProperty Name="ProduktId" ColumnName="ProduktId" />
+          <ScalarProperty Name="NazwaProduktu" ColumnName="NazwaProduktu" />
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="CzasPrzygotowania" ColumnName="CzasPrzygotowania" />
+          <ScalarProperty Name="Polecany" ColumnName="Polecany" />
+          <ScalarProperty Name="Ukryty" ColumnName="Ukryty" />
+          <ScalarProperty Name="NazwaPlikuObrazka" ColumnName="NazwaPlikuObrazka" />
+          <ScalarProperty Name="KategoriaId" ColumnName="KategoriaId" />
+          <ScalarProperty Name="OpisyId" ColumnName="OpisyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zamowienie">
+      <EntityTypeMapping TypeName="BarSzybkiejObsługiMVCModel.Zamowienie">
+        <MappingFragment StoreEntitySet="Zamowienie">
+          <ScalarProperty Name="ZamowienieId" ColumnName="ZamowienieId" />
+          <ScalarProperty Name="KodZamowienia" ColumnName="KodZamowienia" />
+          <ScalarProperty Name="Komentarz" ColumnName="Komentarz" />
+          <ScalarProperty Name="DataDodania" ColumnName="DataDodania" />
+          <ScalarProperty Name="StanZamowienia" ColumnName="StanZamowienia" />
+          <ScalarProperty Name="NaKiedy" ColumnName="NaKiedy" />
+          <ScalarProperty Name="KlientId" ColumnName="KlientId" />
+          <ScalarProperty Name="PlatnoscId" ColumnName="PlatnoscId" />
+          <ScalarProperty Name="PracownikImieNazwisko" ColumnName="PracownikImieNazwisko" />
+          <ScalarProperty Name="PracownikId" ColumnName="PracownikId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

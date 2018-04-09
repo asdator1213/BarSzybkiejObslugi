@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BarSzybkiejObsługiMVCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Kategoria">
+    <Key>
+      <PropertyRef Name="KategoriaId" />
+    </Key>
+    <Property Name="KategoriaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazwaKategorii" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Produkt" Relationship="Self.FK_dbo_Produkt_dbo_Kategoria_KategoriaId" FromRole="Kategoria" ToRole="Produkt" />
+  </EntityType>
+  <EntityType Name="Klient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Zamowienie" Relationship="Self.FK_dbo_Zamowienie_dbo_Klient_KlientId" FromRole="Klient" ToRole="Zamowienie" />
+  </EntityType>
+  <EntityType Name="Opisy">
+    <Key>
+      <PropertyRef Name="OpisyId" />
+    </Key>
+    <Property Name="OpisyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OpisKrotki" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Produkt" Relationship="Self.FK_dbo_Produkt_dbo_Opisy_OpisyId" FromRole="Opisy" ToRole="Produkt" />
+  </EntityType>
+  <EntityType Name="Platnosc">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DataPlatnosci" Type="DateTime" Precision="3" />
+    <Property Name="TypPlatnosci" Type="Int32" Nullable="false" />
+    <Property Name="Kwota" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CzyZaplacono" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Zamowienie" Relationship="Self.FK_dbo_Platnosc_dbo_Zamowienie_Id" FromRole="Platnosc" ToRole="Zamowienie" />
+  </EntityType>
+  <EntityType Name="PozycjeZamowienia">
+    <Key>
+      <PropertyRef Name="PozycjeZamowieniaId" />
+    </Key>
+    <Property Name="PozycjeZamowieniaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ZamowienieId" Type="Int32" Nullable="false" />
+    <Property Name="ProduktId" Type="Int32" Nullable="false" />
+    <Property Name="Ilosc" Type="Int32" Nullable="false" />
+    <Property Name="CenaZakupu" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Produkt" Relationship="Self.FK_dbo_PozycjeZamowienia_dbo_Produkt_ProduktId" FromRole="PozycjeZamowienia" ToRole="Produkt" />
+    <NavigationProperty Name="Zamowienie" Relationship="Self.FK_dbo_PozycjeZamowienia_dbo_Zamowienie_ZamowienieId" FromRole="PozycjeZamowienia" ToRole="Zamowienie" />
+  </EntityType>
+  <EntityType Name="Produkt">
+    <Key>
+      <PropertyRef Name="ProduktId" />
+    </Key>
+    <Property Name="ProduktId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazwaProduktu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Cena" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CzasPrzygotowania" Type="Int32" Nullable="false" />
+    <Property Name="Polecany" Type="Boolean" Nullable="false" />
+    <Property Name="Ukryty" Type="Boolean" Nullable="false" />
+    <Property Name="NazwaPlikuObrazka" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KategoriaId" Type="Int32" Nullable="false" />
+    <Property Name="OpisyId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Kategoria" Relationship="Self.FK_dbo_Produkt_dbo_Kategoria_KategoriaId" FromRole="Produkt" ToRole="Kategoria" />
+    <NavigationProperty Name="Opisy" Relationship="Self.FK_dbo_Produkt_dbo_Opisy_OpisyId" FromRole="Produkt" ToRole="Opisy" />
+    <NavigationProperty Name="PozycjeZamowienia" Relationship="Self.FK_dbo_PozycjeZamowienia_dbo_Produkt_ProduktId" FromRole="Produkt" ToRole="PozycjeZamowienia" />
+  </EntityType>
+  <EntityType Name="Zamowienie">
+    <Key>
+      <PropertyRef Name="ZamowienieId" />
+    </Key>
+    <Property Name="ZamowienieId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KodZamowienia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Komentarz" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DataDodania" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StanZamowienia" Type="Int32" Nullable="false" />
+    <Property Name="NaKiedy" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="KlientId" Type="Int32" Nullable="false" />
+    <Property Name="PlatnoscId" Type="Int32" Nullable="false" />
+    <Property Name="PracownikImieNazwisko" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PracownikId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Klient" Relationship="Self.FK_dbo_Zamowienie_dbo_Klient_KlientId" FromRole="Zamowienie" ToRole="Klient" />
+    <NavigationProperty Name="Platnosc" Relationship="Self.FK_dbo_Platnosc_dbo_Zamowienie_Id" FromRole="Zamowienie" ToRole="Platnosc" />
+    <NavigationProperty Name="PozycjeZamowienia" Relationship="Self.FK_dbo_PozycjeZamowienia_dbo_Zamowienie_ZamowienieId" FromRole="Zamowienie" ToRole="PozycjeZamowienia" />
+  </EntityType>
+  <Association Name="FK_dbo_Produkt_dbo_Kategoria_KategoriaId">
+    <End Role="Kategoria" Type="Self.Kategoria" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Produkt" Type="Self.Produkt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoria">
+        <PropertyRef Name="KategoriaId" />
+      </Principal>
+      <Dependent Role="Produkt">
+        <PropertyRef Name="KategoriaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Zamowienie_dbo_Klient_KlientId">
+    <End Role="Klient" Type="Self.Klient" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Zamowienie" Type="Self.Zamowienie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klient">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Zamowienie">
+        <PropertyRef Name="KlientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Produkt_dbo_Opisy_OpisyId">
+    <End Role="Opisy" Type="Self.Opisy" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Produkt" Type="Self.Produkt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opisy">
+        <PropertyRef Name="OpisyId" />
+      </Principal>
+      <Dependent Role="Produkt">
+        <PropertyRef Name="OpisyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Platnosc_dbo_Zamowienie_Id">
+    <End Role="Zamowienie" Type="Self.Zamowienie" Multiplicity="1" />
+    <End Role="Platnosc" Type="Self.Platnosc" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Zamowienie">
+        <PropertyRef Name="ZamowienieId" />
+      </Principal>
+      <Dependent Role="Platnosc">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_PozycjeZamowienia_dbo_Produkt_ProduktId">
+    <End Role="Produkt" Type="Self.Produkt" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PozycjeZamowienia" Type="Self.PozycjeZamowienia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produkt">
+        <PropertyRef Name="ProduktId" />
+      </Principal>
+      <Dependent Role="PozycjeZamowienia">
+        <PropertyRef Name="ProduktId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_PozycjeZamowienia_dbo_Zamowienie_ZamowienieId">
+    <End Role="Zamowienie" Type="Self.Zamowienie" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PozycjeZamowienia" Type="Self.PozycjeZamowienia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zamowienie">
+        <PropertyRef Name="ZamowienieId" />
+      </Principal>
+      <Dependent Role="PozycjeZamowienia">
+        <PropertyRef Name="ZamowienieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" />
+    <EntitySet Name="Kategoria" EntityType="Self.Kategoria" />
+    <EntitySet Name="Klient" EntityType="Self.Klient" />
+    <EntitySet Name="Opisy" EntityType="Self.Opisy" />
+    <EntitySet Name="Platnosc" EntityType="Self.Platnosc" />
+    <EntitySet Name="PozycjeZamowienia" EntityType="Self.PozycjeZamowienia" />
+    <EntitySet Name="Produkt" EntityType="Self.Produkt" />
+    <EntitySet Name="Zamowienie" EntityType="Self.Zamowienie" />
+    <AssociationSet Name="FK_dbo_Produkt_dbo_Kategoria_KategoriaId" Association="Self.FK_dbo_Produkt_dbo_Kategoria_KategoriaId">
+      <End Role="Kategoria" EntitySet="Kategoria" />
+      <End Role="Produkt" EntitySet="Produkt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Zamowienie_dbo_Klient_KlientId" Association="Self.FK_dbo_Zamowienie_dbo_Klient_KlientId">
+      <End Role="Klient" EntitySet="Klient" />
+      <End Role="Zamowienie" EntitySet="Zamowienie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Produkt_dbo_Opisy_OpisyId" Association="Self.FK_dbo_Produkt_dbo_Opisy_OpisyId">
+      <End Role="Opisy" EntitySet="Opisy" />
+      <End Role="Produkt" EntitySet="Produkt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Platnosc_dbo_Zamowienie_Id" Association="Self.FK_dbo_Platnosc_dbo_Zamowienie_Id">
+      <End Role="Zamowienie" EntitySet="Zamowienie" />
+      <End Role="Platnosc" EntitySet="Platnosc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_PozycjeZamowienia_dbo_Produkt_ProduktId" Association="Self.FK_dbo_PozycjeZamowienia_dbo_Produkt_ProduktId">
+      <End Role="Produkt" EntitySet="Produkt" />
+      <End Role="PozycjeZamowienia" EntitySet="PozycjeZamowienia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_PozycjeZamowienia_dbo_Zamowienie_ZamowienieId" Association="Self.FK_dbo_PozycjeZamowienia_dbo_Zamowienie_ZamowienieId">
+      <End Role="Zamowienie" EntitySet="Zamowienie" />
+      <End Role="PozycjeZamowienia" EntitySet="PozycjeZamowienia" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

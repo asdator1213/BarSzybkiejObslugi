@@ -9,18 +9,28 @@
             <li>
                 @Html.ActionLink("Witaj " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
             </li>
-            <li>
-                @Html.ActionLink("Lista zamówień", "Index", "Zamowienia")
-            </li>
-            <li>@Html.ActionLink("Wszystkie produkty", "Wszystko", "Produkty")</li>
+            @if (User.IsInRole("Admin"))
+            {
+                <li>
+                    @Html.ActionLink("Użytkownicy aplikacji", "Konta", "Konto")
+                </li>
+            }
+            else
+            {
+                <li>
+                    @Html.ActionLink("Lista zamówień", "Index", "Zamowienia")
+                </li>
+                <li>@Html.ActionLink("Wszystkie produkty", "Wszystko", "Produkty")</li>
+            }
+
             <li><a href="javascript:document.getElementById('logoutForm').submit()">Wyloguj się</a></li>
         </ul>
     }
 }
 @*else
-{
-    <ul class="nav navbar-nav navbar-right" style="margin-right:10px">
-        <li>@Html.ActionLink("Rejestracja", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Zaloguj się", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
-}*@
+    {
+        <ul class="nav navbar-nav navbar-right" style="margin-right:10px">
+            <li>@Html.ActionLink("Rejestracja", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+            <li>@Html.ActionLink("Zaloguj się", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        </ul>
+    }*@

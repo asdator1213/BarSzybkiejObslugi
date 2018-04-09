@@ -32,6 +32,7 @@ namespace BarSzybkiejObsługiMVC.Utility
         {
             return HttpContext.Current.User.Identity.Name;
         }
+
         private static string GetUserNameOfTakenOrder(string name)
         {
             if (name == null)

@@ -2,6 +2,7 @@
 using BarSzybkiejObsługiMVC.DAL;
 using BarSzybkiejObsługiMVC.ViewModels;
 using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -67,6 +68,28 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 });
             }
             return View(konta);
+        }
+
+        public ActionResult Usun(string id)
+        {
+            var user = db.Users.Find(id);
+            return View(user);
+        }
+
+        public ActionResult PotwierdzUsun(string id)
+        {
+            try
+            {
+                var user = db.Users.Find(id);
+                db.Users.Remove(user);
+                db.SaveChanges();
+            }
+            catch(Exception)
+            {
+                return RedirectToAction("Konta");
+            }
+
+            return RedirectToAction("Konta");
         }
     }
 }
