@@ -1,0 +1,34 @@
+﻿@model List<BarSzybkiejObsługiMVC.Models.Produkt>
+@{
+    ViewBag.Title = "Lista produktow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" id="category-bar">
+    <div class="col-md-6">
+        <h4>@Model.FirstOrDefault().Kategoria.NazwaKategorii </h4>
+    </div>
+    <div class="col-md-6">
+        <h4>Kliknij na produkt, aby zobaczyć szczegóły</h4>
+    </div>
+</div>
+
+<table class="table table-striped" id="categoryProductsTable" style="width:100%">
+    <tr>
+        <th></th>
+        <th>Nazwa produktu</th>
+        <th>Czas przygotowania</th>
+        <th>Krótki opis</th>
+        <th>Cena</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+    <tr class="categoryProductsRow" onclick="window.location = '@Url.Action("Szczegoly", "Produkty", new { id = item.ProduktId})';">
+        <td><img src="~/Content/Images/@item.NazwaPlikuObrazka" class="categoryProductImage" /></td>
+        <td style="text-align:center; vertical-align:middle">@item.NazwaProduktu</td>
+        <td style="text-align:center; vertical-align:middle">@item.CzasPrzygotowania minut</td>
+        <td style="text-align:center; vertical-align:middle">@item.Opisy.OpisKrotki</td>
+        <td style="text-align:center; vertical-align:middle">@item.Cena zł</td>
+    </tr>
+    }
+</table>

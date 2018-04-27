@@ -1,0 +1,37 @@
+﻿@model BarSzybkiejObsługiMVC.Models.Klient
+
+@{
+    ViewBag.Title = "EdytujKlienta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edytuj klienta</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div>
+        @Html.LabelFor(model => model.Imie)
+        @Html.TextBoxFor(model => model.Imie, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Imie)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Nazwisko)
+        @Html.TextBoxFor(model => model.Nazwisko, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Nazwisko)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Telefon)
+        @Html.TextBoxFor(model => model.Telefon, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Telefon)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+    <div style="margin-top:20px">
+        <button class="btn btn-info" type="submit">Zapisz zmiany</button>
+        @Html.ActionLink("Powrót", "Szczegoly", "Zamowienia", new { id=Model.Id}, new { @class="btn btn-warning"})
+    </div>
+}

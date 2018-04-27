@@ -1,0 +1,83 @@
+﻿@model BarSzybkiejObsługiMVC.Models.Produkt
+
+
+@{
+    ViewBag.Title = "Edytuj";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 style="margin:35px 0">Edytuj produkt: @Model.NazwaProduktu</h3>
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.ProduktId)
+    @Html.HiddenFor(model => model.Ukryty)
+    @Html.HiddenFor(model => model.Polecany)
+    @Html.HiddenFor(model => model.OpisyId)
+    @Html.HiddenFor(model => model.NazwaPlikuObrazka)
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.NazwaProduktu)
+            @Html.TextBoxFor(model => model.NazwaProduktu, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.NazwaProduktu)
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Opisy.Opis)
+            @Html.TextAreaFor(model => model.Opisy.Opis, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Opisy.Opis)
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Opisy.OpisKrotki)
+            @Html.TextAreaFor(model => model.Opisy.OpisKrotki, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Opisy.OpisKrotki)
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px">
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.Cena)
+            @Html.TextBoxFor(model => model.Cena, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Cena)
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(model => model.CzasPrzygotowania)
+            @Html.TextBoxFor(model => model.CzasPrzygotowania, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.CzasPrzygotowania)
+        </div>
+        <div class="col-md-4">
+            <label>Kategoria</label>
+            @Html.DropDownListFor(model => model.KategoriaId, (IEnumerable<SelectListItem>)ViewBag.Kategorie, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-2" style="text-align:center">
+            <input type="submit" value="Zapisz produkt" class="btn btn-info" />
+        </div>
+        <div class="col-md-2" style="text-align:center">
+            @Html.ActionLink("Powrót", "Szczegoly", "Produkty", new { id = Model.ProduktId }, new { @class = "btn btn-warning" })
+        </div>
+        <div class="col-md-2" style="text-align:center">
+            @if (!Model.Ukryty)
+            {
+                @Html.ActionLink("Ukryj produkt", "Ukryj", "Produkty", new { id = Model.ProduktId, url = "Edytuj" }, new { @class = "btn btn-danger koszykDodaj" })
+            }
+            else
+            {
+                @Html.ActionLink("Pokaż produkt", "Pokaz", "Produkty", new { id = Model.ProduktId, url = "Edytuj" }, new { @class = "btn btn-success koszykDodaj" })
+            }
+        </div>
+        <div class="col-md-2">
+
+            @if (!Model.Polecany)
+            {
+                @Html.ActionLink("Polecaj produkt", "Polecany", "Produkty", new { id = Model.ProduktId, url = "Edytuj" }, new { @class = "btn btn-danger koszykDodaj" })
+            }
+            else
+            {
+                @Html.ActionLink("Niepolecaj produktu", "Niepolecany", "Produkty", new { id = Model.ProduktId, url = "Edytuj" }, new { @class = "btn btn-success koszykDodaj" })
+            }
+        </div>
+    </div>
+}
+

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<BarSzybkiejObsługiMVC.Models.Produkt>
+@{
+    ViewBag.Title = "Bar szybkiej obsługi";
+}
+
+<div class="content" id="category-bar">
+    <center><h4>Szybko, smacznie, bez zbędnych formalności.</h4></center>
+    <center><h3>Złóż zamówienie i odbierz je w ustalonym terminie!</h3></center>
+    <center><h3>100% satysfakcji!</h3></center>
+</div>
+<br />
+<h2>Polecane produkty</h2>
+
+<div class="row">
+    <div class="polecane_bar">
+        
+        @foreach (var item in Model)
+        {
+            <a href="@Url.Action("Szczegoly", "Produkty", new { id = item.ProduktId})">
+                <div class="polecane mainPagePolecane">
+                    <img src="~/Content/Images/@item.NazwaPlikuObrazka" />
+                    <br /><br />
+                    <div class="centered">@item.NazwaProduktu</div>
+                </div>
+            </a>
+        }
+
+    </div>
+</div>
+

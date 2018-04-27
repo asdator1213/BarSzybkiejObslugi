@@ -1,0 +1,49 @@
+﻿@model BarSzybkiejObsługiMVC.ViewModels.LoginViewModel
+
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container" style="margin:0px">
+    <div class="card card-container">
+        <center><h4><b>Zaloguj się</b></h4></center>
+        <p id="profile-name" class="profile-name-card"></p>
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-signin" }))
+        {
+            @Html.AntiForgeryToken()
+            <span id="reauth-email" class="reauth-email"></span>
+            @Html.TextBoxFor(model => model.Username, new
+            {
+                id = "inputLogin",
+                @class = "form-control",
+                placeholder = "Username",
+                required = "required",
+                autofocus = "autofocus"
+            })
+            @Html.ValidationMessageFor(x => x.Username, "", new { @class = "field-validation-error" })
+            @Html.TextBoxFor(model => model.Password, new
+            {
+                id = "inputPassword",
+                @class = "form-control",
+                placeholder = "Password",
+                required = "required",
+                type = "password"
+            })
+            @Html.ValidationMessageFor(x => x.Password, "", new { @class = "field-validation-error" })
+            <button class="btn btn-lg btn-info btn-block btn-signin" type="submit">Zaloguj</button>
+
+        }
+
+    </div><!-- /card-container -->
+</div>
+
+
+@section Scripts
+{
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

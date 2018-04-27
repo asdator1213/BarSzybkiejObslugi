@@ -1,0 +1,16 @@
+﻿@model BarSzybkiejObsługiMVC.DAL.ApplicationUser
+
+
+@{
+    ViewBag.Title = "Usun";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Czy na pewno chcesz usunąć tego użytkownika?</h3>
+
+<h4><b>Imię i nazwisko: </b>@Model.Name </h4>
+<h4><b>Nazwa użytkownika: </b>@Model.UserName</h4>
+<h4><b>Adres e-mail: </b>@Model.Email</h4>
+
+@Html.ActionLink("Usuń", "PotwierdzUsun", "Konto", new { id = Model.Id }, new { @class = "btn btn-info" })
+@Html.ActionLink("Powrót do listy użytkowników", "Konta", "Konto",null, new { @class = "btn btn-warning" })

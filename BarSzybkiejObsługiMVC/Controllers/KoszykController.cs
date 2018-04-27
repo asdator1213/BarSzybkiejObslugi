@@ -89,6 +89,18 @@ namespace BarSzybkiejObsługiMVC.Controllers
                 return RedirectToAction("PotwierdzenieZamowienia", new { nrZamowienia = noweZamowienie.ZamowienieId });
             }
 
+            zamowienie = new ZamowienieViewModel
+            {
+                PozycjeKoszyka = koszykManager.PobierzKoszyk(),
+                WartoscZamowienia = koszykManager.PobierzWartoscKoszyka(),
+            };
+            zamowienie.CzasOczekiwania = zamowienie.PozycjeKoszyka
+                .Max(x => x.Produkt.CzasPrzygotowania);
+
+            DateTime dt = DateTime.Now;
+            dt = dt.AddMinutes(zamowienie.CzasOczekiwania);
+            zamowienie.NaKiedy = dt;
+
             return View(zamowienie);
         }
 

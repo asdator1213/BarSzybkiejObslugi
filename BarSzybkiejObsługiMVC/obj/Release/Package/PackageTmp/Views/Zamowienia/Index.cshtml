@@ -1,0 +1,89 @@
+﻿@using Microsoft.AspNet.Identity;
+@model List<BarSzybkiejObsługiMVC.Models.Zamowienie>
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/style.css" rel="stylesheet" />
+<h2>Wszystkie zamówienia</h2>
+<div style="margin:20px 0">
+    <div style="float:left">@Html.ActionLink("Dodaj nowe zamówienie", "Index", "Home", null, new { @class = "btn btn-info" })</div>
+    @using (Html.BeginForm())
+    {
+        <div style="margin-left:50px;float:left">@Html.TextBox("OrderCode", null, new { @class = "form-control", placeholder = "Wpisz kod zamówienia" })</div>
+        <input type="submit" class="btn btn-info" value="Szukaj" />
+    }
+
+    <div style="clear:both"></div>
+</div>
+
+<div class="row">
+    <table id="lista-zamowien" class="table table-hover col-xs-12">
+        <tr>
+            <td>Id zamówienia</td>
+            <td>Data dodania</td>
+            <td>Kod zamówienia</td>
+            <td>Kwota zamówienia</td>
+            <td>Stan zamówienia</td>
+            <td>Czy zapłacono?</td>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            var custom_style = "";
+            if (item.PracownikId == User.Identity.GetUserId())
+            {
+                custom_style = "border: 2px solid green;";
+            }
+
+            <tr style="@custom_style">
+                <td>@item.ZamowienieId</td>
+                <td>@item.DataDodania</td>
+                <td>@item.KodZamowienia</td>
+                <td>@item.Platnosc.Kwota</td>
+
+                @{
+                    var stanZamowienia = "";
+                    if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Nowe)
+                    {
+                        stanZamowienia = "nowe";
+                    }
+                    else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Gotowe)
+                    {
+                        stanZamowienia = "gotowe";
+                    }
+                    else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Zrealizowane)
+                    {
+                        stanZamowienia = "zrealizowane";
+                    }
+                    else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Opóźnione)
+                    {
+                        stanZamowienia = "opoznione";
+                    }
+                    else if(item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Przyjete)
+                    {
+                        stanZamowienia = "przyjete";
+                    }
+                    else if (item.StanZamowienia == BarSzybkiejObsługiMVC.Models.StanZamowienia.Nieodebrane)
+                    {
+                        stanZamowienia = "nieodebrane";
+                    }
+                    else
+                    {
+                        stanZamowienia = "niezrealizowane";
+                    }
+                    <td class="@stanZamowienia"> @item.StanZamowienia </td>
+                }
+                <td>
+                    @{
+                        var czyZaplacono = "Tak";
+                        if (!item.Platnosc.CzyZaplacono) { czyZaplacono = "Nie"; }
+                    }
+                    @czyZaplacono
+                </td>
+                <td>@Html.ActionLink("Szczegóły", "Szczegoly", "Zamowienia", new { id = item.ZamowienieId }, new { @class = "btn btn-info" })</td>
+            </tr>
+        }
+
+    </table>
+</div>

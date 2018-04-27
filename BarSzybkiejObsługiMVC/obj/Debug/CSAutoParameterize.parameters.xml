@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BarContext-Web.config Connection String" description="BarContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\mssqllocaldb;Initial Catalog=BarSzybkiejObsługiMVC;Integrated Security=SSPI; AttachDbFilename=|DataDirectory|\BarSzybkiejObsługiMVC.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\asdator1213\\Documents\\Visual\ Studio\ 2017\\Projects\\BarSzybkiejObslugiMVC\\BarSzybkiejObsługiMVC\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BarContext']/@connectionString" />
+  </parameter>
+</parameters>

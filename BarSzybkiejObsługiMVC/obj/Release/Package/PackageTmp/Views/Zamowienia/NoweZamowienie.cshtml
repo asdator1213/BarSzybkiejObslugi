@@ -1,0 +1,40 @@
+﻿@model BarSzybkiejObsługiMVC.ViewModels.PozycjeZamowienViewModel
+
+@{
+    ViewBag.Title = "NoweZamowienie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dobierz produkty do zamówienia</h2>
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm())
+        {
+            <label>Produkt</label>
+            @Html.DropDownListFor(model => model.Produkt.ProduktId, (IEnumerable<SelectListItem>)ViewBag.Produkty, new { @class = "form-control" })
+            <label style="margin-top:10px;">Ilość produktu</label>
+            @Html.TextBoxFor(model => model.IloscProduktu, new { @class = "form-control", type = "number", min = "1", value = "1" })
+            <input type="submit" class="btn btn-info" style="margin-top:10px;" value="Dodaj do zamówienia" />
+            @Html.ActionLink("Powrót", "Index", "Zamowienia",null, new { @class = "btn btn-warning", style = "margin-top:10px;" })
+        }
+
+    </div>
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <tr>
+                <th>Produkt</th>
+                <th>Ilość</th>
+                <th>Cena za sztukę</th>
+            </tr>
+            @foreach (var item in Model.PozycjeZamowienia)
+            {
+                <tr>
+                    <td>@item.Produkt.NazwaProduktu</td>
+                    <td>@item.Ilosc</td>
+                    <td>@item.Produkt.Cena</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

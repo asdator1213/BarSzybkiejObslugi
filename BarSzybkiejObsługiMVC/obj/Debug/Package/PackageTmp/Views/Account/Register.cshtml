@@ -1,0 +1,79 @@
+﻿@model BarSzybkiejObsługiMVC.ViewModels.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Stwórz konto</h2>
+
+<div>
+    @using (@Html.BeginForm("Register", "Account"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            <div>
+                @Html.LabelFor(model => model.Name)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+        </div>
+        <div>
+            <div>
+                @Html.LabelFor(model => model.Username)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Username, new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.Username)
+            </div>
+        </div>
+        <div>
+            <div>
+                @Html.LabelFor(model => model.Email)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+        </div>
+        <div>
+            <div>
+                @Html.LabelFor(model => model.Password)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Password, new { type = "password", @class = "form-control" })
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+        </div>
+        <div>
+            <div>
+                @Html.LabelFor(model => model.ConfirmPassword)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.ConfirmPassword, new {type="password", @class = "form-control" })
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.ConfirmPassword)
+            </div>
+        </div>
+        <input type="submit" class="btn btn-info" value="Załóż nowe konto" />
+    }
+</div>
+
+@section Scripts
+{
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -6,7 +6,7 @@
         {
             try
             {
-                SMSApi.Api.Client client = new SMSApi.Api.Client("trrrrr01@gmail.com");
+                SMSApi.Api.Client client = new SMSApi.Api.Client("mail");
                 client.SetPasswordHash("eb4c1b19fbee61ad8adf6b463c21842e");
 
                 var smsApi = new SMSApi.Api.SMSFactory(client);
